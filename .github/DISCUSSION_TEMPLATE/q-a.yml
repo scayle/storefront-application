@@ -1,55 +1,37 @@
-title: "[General] "
-labels: ["General Introduction"]
+title: ""
+labels: []
 body:
-  - type: markdown
-    attributes:
-      value: |
-        This is text that will show up in the template!
-  - type: textarea
-    id: improvements
-    attributes:
-      label: Top 3 improvements
-      description: "What are the top 3 improvements we could make to this project?"
-      value: |
-        1.
-        2.
-        3.
-        ...
-      render: bash
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Markdown header
-        And some more markdown
-  - type: input
-    id: has-id
-    attributes:
-      label: Suggestions
-      description: A description about suggestions to help you
-    validations:
-      required: true
   - type: dropdown
-    id: download
+    id: project
     attributes:
-      label: Which area of this project could be most improved?
+      label: Which project is this a question for?
       options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
+        - Storefront Boilerplate
+        - Storefront Nuxt (NPM Package)
+        - Storefront Core (NPM Package)
     validations:
       required: true
-  - type: checkboxes
+  - type: textarea
+    id: description
     attributes:
-      label: Check that box!
-      options:
-        - label: This one!
-          required: true
-        - label: I won't stop you if you check this one, too
+      label: What is your question?"
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
-        ### The thrilling conclusion
-        _to our template_
+        ### Version Information
+  - type: input
+    id: storefront-nuxt-version
+    attributes:
+      label: `@scayle/storefront-nuxt` version
+      description: Please enter the `@scayle/storefront-nuxt` version you are currently on
+    validations:
+      required: true
+  - type: input
+    id: nuxt-version
+    attributes:
+      label: `nuxt` version
+      description: Please enter the nuxt version which you are currently on
+    validations:
+      required: true
