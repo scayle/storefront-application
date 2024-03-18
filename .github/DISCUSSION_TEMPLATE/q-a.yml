@@ -24,14 +24,14 @@ body:
   - type: input
     id: storefront-nuxt-version
     attributes:
-      label: `@scayle/storefront-nuxt` version
-      description: Please enter the `@scayle/storefront-nuxt` version you are currently on
+      label: "`@scayle/storefront-nuxt` version"
+      description: "Please enter the `@scayle/storefront-nuxt` version you are currently on"
     validations:
       required: true
   - type: input
     id: nuxt-version
     attributes:
-      label: `nuxt` version
-      description: Please enter the nuxt version which you are currently on
+      label: "`nuxt` version"
+      description: "Please enter the nuxt version which you are currently on"
     validations:
       required: true
