@@ -22,7 +22,7 @@ Please head over to the [Discussions](https://github.com/scayle/storefront-appli
 
 ## About SCAYLE Storefront
 
-SCAYLE Storefront application is an all-in-one starter kit for building
+SCAYLE Storefront Application is an all-in-one starter kit for building
 high-performance e-commerce shops for the SCAYLE Commerce Engine. It makes it
 quick and easy to build a best-in-class shop frontend. The latest version of the
 Storefront application is based on Nuxt and Vue 3 and consists of two parts:
