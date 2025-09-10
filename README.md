@@ -9,14 +9,14 @@
 </div>
 
 <div align="center">
-  <h4><a href="https://github.com/scayle/storefront-application/discussions)">Technical Support</a> | <a href="https://scayle.dev">Documentation</a> | <a href="https://www.scayle.com/">Website</a></h4>
+  <h4><a href="https://github.com/scayle/storefront-application/discussions">Technical Support</a> | <a href="https://scayle.dev">Documentation</a> | <a href="https://www.scayle.com/">Website</a></h4>
 </div>
 
 ## Technical Support
 
 Welcome to the public support repository for the SCAYLE Storefront Application.
 
-Here you will find announcements by the Storefront Team, you can ask for answers and report issues back to us.
+Here you will find announcements by the Storefront Team, where you can ask for answers and report issues back to us.
 
 Please head over to the [Discussions](https://github.com/scayle/storefront-application/discussions) to get started.
 
@@ -25,7 +25,7 @@ Please head over to the [Discussions](https://github.com/scayle/storefront-appli
 SCAYLE Storefront Application is an all-in-one starter kit for building
 high-performance e-commerce shops for the SCAYLE Commerce Engine. It makes it
 quick and easy to build a best-in-class shop frontend. The latest version of the
-Storefront application is based on Nuxt and Vue 3 and consists of two parts:
+Storefront Application is based on Nuxt and Vue 3 and consists of two parts:
 
 - Storefront SDKs: the headless storefront that provides design-agnostic business logic,
   feature packages, composables, and several helpers and utilities to simplify
@@ -34,7 +34,7 @@ Storefront application is based on Nuxt and Vue 3 and consists of two parts:
   includes the Storefront SDKs along with all the features and pages required
   for a modern e-commerce frontend.
 
-The Storefront application is built to make it easy to change or extend the shop design.
+The Storefront Application is built to make it easy to change or extend the shop design.
 This approach drastically reduces the effort required to launch a new e-commerce shop,
 as you only have to focus on customizing the UI and design layer to your specific needs.
 
@@ -47,9 +47,9 @@ as you only have to focus on customizing the UI and design layer to your specifi
 ## Getting Started
 
 The following outline should provide you with an overview of how to get your
-local development environment using the Storefront Boilerplate up and running.
-For more in-depth explanations and How-to guides, please consult the [SCAYLE Resource Center](https://scayle.dev/en/storefront-guide/developer-guide/getting-started/setup-your-storefront).
+local development environment using the Storefront Application up and running.
+For more in-depth explanations and How-to guides, please consult the [SCAYLE Resource Center](https://scayle.dev/en/storefront-guide/storefront-application/readme/setup-your-storefront).
 
 This guide provides instructions to set up your local development environment using SCAYLE Storefront.
 
-For more details, consult the [SCAYLE Resource Center](https://scayle.dev/en/storefront-guide/developer-guide/technical-foundation/configuration).
+For further details, please explore [SCAYLE Resource Center](https://scayle.dev/en/storefront-guide/storefront-application/readme/introduction).
