@@ -1,0 +1,87 @@
+# Settings for the Storefront Application: pnpm options, overrides and security floors. The application
+# installs on its own, without a surrounding workspace.
+packages:
+  - './'
+  - '!testing/playwright/'
+
+overrides:
+  # vite-plugin-vue-devtools 9.0.0-rc.2 depends on `@vitejs/devtools-kit ^0.7.6` for its types only, and
+  # vite-plugin-inspect 12.1.0 for `defineRpcFunction`, which 0.8.0 still exports. Keeps one kit next to
+  # the 0.8.0 storefront-devtools uses, as Nuxt DevTools 4 does. Drop once both declare ^0.8.
+  '@vitejs/devtools-kit': 0.8.3
+  # One Node typings version for the whole tree.
+  '@types/node': ^26
+  # Keeps the @vue/* packages on the same version as vue, so the compiler and runtime packages never
+  # drift apart. Without these three, a newer patch release of @vue/compiler-core, -ssr, -dom, -sfc
+  # and shared can resolve next to the pinned vue. The other @vue/* packages follow through exact
+  # dependencies. Raise them together with the `vue` and `@vue/server-renderer` pins in package.json.
+  '@vue/compiler-dom': 3.5.46
+  '@vue/compiler-sfc': 3.5.46
+  '@vue/shared': 3.5.46
+  # axios 1.12.2 (@amplience/dc-cli, axios-retry, dc-management-sdk-js) has open advisories. 1.20.0 is the
+  # first clean 1.x release, so this stays in the same major.
+  # Drop once those packages declare axios >=1.20.
+  axios: ^1.20.0
+  # Added for type issues with Vue 3.3.6. No advisory involved. Check why before removing.
+  cliui: 8.0.1
+  # vite-svg-loader declares svgo ^3.3.5 and gets 4.x here. svgo 3.3.5 has no advisory today, so this
+  # only keeps the SVG pipeline on the 4.x line that postcss-svgo already uses. Floor 4.1.0 is the first
+  # clean 4.x release. Revisit once vite-svg-loader supports svgo 4.
+  svgo: ^4.1.0
+  # lodash 4.17.21 (@amplience/dc-cli, table) has open advisories. 4.18.0 is the first clean 4.x
+  # release. Added in the 2026-04-08 advisories round.
+  lodash: ^4.18.1
+  # @grpc/proto-loader and @valkey/valkey-glide declare protobufjs 7. The 7.x line has no advisory
+  # today. This keeps the tree on 8.x, which the pnpm 11 migration introduced. Moving back
+  # to 7.x changes the lockfile and is a follow-up.
+  protobufjs: ^8.7.1
+  # external-editor declares tmp 0.0.x. All of 0.0.x has advisories and no fix, 0.2.7 is the first clean
+  # release. external-editor only calls tmpNameSync, which 0.2.x still has.
+  tmp@<0.2.7: ^0.2.7
+  # @hono/vite-dev-server 0.26.1 (latest) still depends on @hono/node-server ^1.19.11. This keeps the
+  # whole tree on one major, as the SDK packages use 2.x. 1.19.17 is not vulnerable. The floor 2.0.10
+  # fixes GHSA-9mqv-5hh9-4cgg.
+  '@hono/node-server@<2.0.10': ^2.0.10
+  # contentful-batch-libs declares uuid 9, which is affected by GHSA-w5hq-g745-h8pq and has no fix in
+  # 9.x. It only calls v4(), which 11.x still exports.
+  uuid@<11.1.1: ^11.1.1
+  # ajv 6.12.6 (@amplience/dc-cli, table) is affected by GHSA-2g4f-4pwh-qvx6 and GHSA-v88g-cgmw-v5xw.
+  # 6.14.0 is the first fix in the 6.x line, so this stays in the same major.
+  ajv@<6.14.0: ^6.14.0
+  # @tiptap/html (Storyblok richtext) declares happy-dom ^20. 20.x has CVE-2026-115895 and no fix in that
+  # major. 21.0.4 is the first clean release. 21.0.0 only turns CSS and iframe loading off by default, which
+  # tiptap's HTML parsing does not use. Drop once @tiptap/html declares happy-dom 21.
+  happy-dom@<21.0.4: ^21.0.4
+strictPeerDependencies: false
+peerDependencyRules:
+  allowedVersions:
+    # Same reason as the `@vitejs/devtools-kit` override above.
+    vite-plugin-vue-devtools>@vitejs/devtools: 0.8.0
+autoInstallPeers: true
+autoDedupe: true
+linkWorkspacePackages: false
+saveExact: true
+verifyDepsBeforeRun: warn
+# pnpm reads this in minutes: 4320 is 3 days, the same wait Renovate applies.
+minimumReleaseAge: 4320
+# The @scayle packages are published by SCAYLE, so fresh releases are allowed.
+minimumReleaseAgeExclude:
+  - '@scayle/*'
+publicHoistPattern:
+  - '@inertiajs/core'
+allowBuilds:
+  esbuild: true
+  '@parcel/watcher': false
+  '@playwright/browser-chromium': false
+  aws-sdk: false
+  core-js: false
+  core-js-pure: false
+  lefthook: false
+  protobufjs: false
+  sharp: false
+  unix-dgram: false
+  unrs-resolver: false
+  vue-demi: false
+  '@gql2ts/language-typescript': true
+  spawn-sync: true
+  yarn: false

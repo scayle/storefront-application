@@ -1,37 +1,39 @@
-title: "[Question]"
+title: '[Question] '
 labels: []
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post credentials, API tokens, or customer data. Discussions are public.
   - type: dropdown
     id: project
     attributes:
       label: Which project is this a question for?
       options:
-        - Storefront Boilerplate
-        - Storefront Nuxt (NPM Package)
-        - Storefront Core (NPM Package)
+        - Storefront Application V3
+        - Storefront Application V2 (Nuxt)
+        - SDK packages only
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: What is your question?"
+      label: What is your question?
     validations:
       required: true
   - type: markdown
     attributes:
       value: |
-        ### Version Information
+        ### Version information
   - type: input
-    id: storefront-nuxt-version
+    id: sdk-version
     attributes:
-      label: "`@scayle/storefront-nuxt` version"
-      description: "Please enter the `@scayle/storefront-nuxt` version you are currently on"
+      label: SDK package version
+      description: 'The `@scayle/storefront` version for V3, or the `@scayle/storefront-nuxt` version for V2.'
     validations:
       required: true
   - type: input
-    id: nuxt-version
+    id: runtime-version
     attributes:
-      label: "`nuxt` version"
-      description: "Please enter the nuxt version which you are currently on"
-    validations:
-      required: true
+      label: Runtime or framework version
+      description: 'The Node.js version for V3, or the `nuxt` version for V2.'

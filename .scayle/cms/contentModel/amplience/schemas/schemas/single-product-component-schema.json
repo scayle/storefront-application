@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/single-product-component.json",
+  "title": "Single Product",
+  "description": "Spotlights one product as a large card. Use it to feature a single hero product with an optional deal badge and countdown.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "title": "Product ID",
+      "description": "ID of the product to feature. Nothing renders when the product is unavailable in the current shop.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "badge": {
+      "title": "Badge",
+      "description": "Short label shown above the product, for example \"Deal of the day\". Leave empty to hide the badge.",
+      "type": "string"
+    },
+    "high_urgency": {
+      "title": "High Urgency",
+      "description": "When enabled, the badge and countdown use the high-urgency styling. Defaults to disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "background_color": {
+      "title": "Background Color",
+      "description": "Card background color using a hex color code. Leave empty for the default background.",
+      "type": "string",
+      "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+    },
+    "text_color": {
+      "title": "Text Color",
+      "description": "Card text color using a hex color code. Leave empty for the default text color.",
+      "type": "string",
+      "pattern": "^#(?:[0-9a-fA-F]{3}){1,2}$"
+    },
+    "show_countdown": {
+      "title": "Show Countdown",
+      "description": "When enabled, a countdown to the end date is shown on the card. Defaults to disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "countdown_end_date": {
+      "title": "Countdown End Date",
+      "description": "Date and time the countdown runs down to. Required for the countdown to appear.",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "product_id"
+  ],
+  "propertyOrder": [
+    "product_id",
+    "badge",
+    "high_urgency",
+    "background_color",
+    "text_color",
+    "show_countdown",
+    "countdown_end_date"
+  ]
+}

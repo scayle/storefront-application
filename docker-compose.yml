@@ -1,0 +1,31 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Local trace backend, started only by `docker compose --profile tracing up -d`
+  # so the default stack stays Redis-only for developers who are not tracing.
+  # Storage is in-memory: traces are gone once the container stops.
+  # @see docs/observability.md
+  jaeger:
+    image: cr.jaegertracing.io/jaegertracing/jaeger:2.20.0
+    profiles:
+      - tracing
+    ports:
+      # Jaeger UI and query API
+      - '16686:16686'
+      # OTLP over HTTP, what OTEL_EXPORTER_OTLP_ENDPOINT points at
+      - '4318:4318'
+    restart: unless-stopped
+
+volumes:
+  redis-data:

@@ -1,0 +1,463 @@
+/* Self-hosted Inter variable font - eliminates the Google Fonts third-party
+   request. The wght axis spans 100-900, so the --font-weight-* tokens resolve
+   from a single variable file per unicode-range subset. */
+@import '@fontsource-variable/inter';
+
+/* Stories, tests and docs pages never ship, so they stay out of production CSS.
+   Storybook adds them back in `.storybook/preview.css`. */
+@import 'tailwindcss' source('../');
+@source not '../**/*.stories.ts';
+@source not '../**/*.test.ts';
+@source not '../**/*.mdx';
+
+@import './design-tokens.css';
+
+/* ============================================
+   CUSTOM UTILITIES
+   ============================================
+   Typography utilities mirror the Type Hierarchy in Storybook
+   (UI/Core/Typography). Pick the visual level from design,
+   then use the matching semantic tag (heading-*, body-*, disclaimer). See
+   src/client/CLAUDE.md.
+   ============================================ */
+
+/* Light-background text inputs (e.g. SFTextInput). Keeps autofill fill and text
+   color on white instead of the browser default yellow highlight. */
+@utility input-white-autofill {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+/*
+ The keyboard focus indicator, and the only place it is defined. Components
+ must not redefine `:focus-visible` — reach for `focus-style-inset` below when
+ the ring would be clipped, and otherwise let this one apply.
+
+ A single tone cannot meet the 3:1 of WCAG 2.2 SC 1.4.11 against every surface
+ a ring can land on, so the indicator reads as two tones: the focus color
+ carries light backgrounds and the halo carries dark ones, and whichever
+ surface the ring lands on, one of the two is guaranteed to contrast with it.
+
+ It is drawn with two properties rather than three bands. A 6px halo shadow
+ spreads from the edge, and a 2px outline sitting at an offset of 2px paints
+ over its middle. What is left visible is halo 0-2px, focus color 2-4px, halo
+ 4-6px. Retuning the band widths means keeping outline-offset, outline-width
+ and the shadow spread consistent: the shadow has to reach past the outline,
+ or the outer halo disappears.
+*/
+@utility focus-style {
+  @apply ring-0 outline-2 outline-offset-2 outline-focus;
+  /* Ensure focus outline is visible for adjacent elements */
+  z-index: 1;
+  box-shadow: 0 0 0 6px var(--color-focus-halo);
+  /* Match the focus ring to rounded corners when the element has no rounded-* utility. */
+  &:not([class*='rounded']) {
+    @apply rounded-md;
+  }
+}
+
+/*
+ Inward counterpart of `focus-style`, for controls whose ring an
+ `overflow-hidden` ancestor would cut off: scroll rails, truncating rows,
+ controls inside a bordered shell. Same two tones and the same guarantee, with
+ the bands measured inward from the edge: halo 0-2px, focus color 2-4px, halo
+ 4-6px.
+
+ The offsets are not mirrored, because a negative outline-offset is not the
+ negation of a positive one. A positive offset moves the outline's inner edge
+ outward, so +2 with a 2px width paints 2-4px out. A negative offset shrinks
+ the rectangle the outline is drawn around and the stroke still falls outside
+ that rectangle, so landing the same 2-4px band inward takes -4, not -2.
+
+ Note the halo here is an inset shadow, which paints above the element's
+ background but below its content. On a control whose content covers its own
+ edges — a full-bleed image, for instance — the halo is hidden and only the
+ outline shows.
+*/
+@utility focus-style-inset {
+  @apply ring-0 outline-2 -outline-offset-4 outline-focus;
+  z-index: 1;
+  box-shadow: inset 0 0 0 6px var(--color-focus-halo);
+  /* Match the focus ring to rounded corners when the element has no rounded-* utility. */
+  &:not([class*='rounded']) {
+    @apply rounded-md;
+  }
+}
+
+/*
+ Extends a control's pointer target to at least 24 by 24px, the WCAG 2.2
+ SC 2.5.8 minimum, without changing what renders. A transparent `::before`
+ centered on the control takes the taps, as large as the control or 24px,
+ whichever is bigger in each direction. A 12px icon button gains a 24px square,
+ a 20px-high text button a full-width 24px strip.
+
+ The position sits in `:where()` so a caller's `absolute`, `fixed` or `sticky`
+ still wins, and any of them anchors the pseudo-element just as well. Keep at
+ least the extension's width free between neighboring targets, or the later
+ control in the DOM takes taps meant for the earlier one.
+*/
+@utility hit-area-min {
+  :where(&) {
+    position: relative;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100%, var(--spacing-6));
+    height: max(100%, var(--spacing-6));
+    translate: -50% -50%;
+  }
+}
+
+/* Scroll containers where content is inserted above the viewport (infinite list,
+   lazy-loaded blocks). Disables scroll anchoring so the page does not jump when
+   height changes. Apply on the element with overflow-y-auto / overflow-y-scroll. */
+@utility anchor-scrolling-none {
+  overflow-anchor: none;
+}
+
+/* Page title: one primary h1 per view (basket/wishlist empty, order success,
+   404, account empty states). CMS page headings use HeadingLevel.PAGE. */
+@utility heading-page {
+  @apply text-3xl font-semibold text-primary;
+}
+
+/* Main section title within a page (basket summary, account layout, search
+   headline, product blocks). Default semantic tag: h2. CMS: SECTION_1. */
+@utility heading-section-1 {
+  @apply text-2xl font-semibold text-primary;
+}
+
+/* Subsection title (filter header, profile blocks, modals, footer columns).
+   Default semantic tag: h3. CMS: SECTION_2. */
+@utility heading-section-2 {
+  @apply text-lg font-semibold text-primary;
+}
+
+/* Small section label (basket line groups, order detail boxes, promotion rows).
+   Default semantic tag: h4. CMS: SECTION_3. */
+@utility heading-section-3 {
+  @apply text-md font-semibold text-primary;
+}
+
+/* Default body copy and CMS paragraph text. Use on p or span when p is invalid. */
+@utility body-default {
+  @apply text-md font-normal text-primary;
+}
+
+/* Resting (no hover / focus / disabled) visual of a medium-sized SFButton in
+   the accent variant. Use on non-interactive surfaces that need to match the
+   button footprint (e.g. a `<span aria-current="true">` rendered in place of
+   the current item in a list of links). Keep in sync with the accent +
+   medium branches of `SFButton`'s `variantClasses` / `sizeClasses`. */
+@utility sf-button-md-resting-accent {
+  @apply inline-flex h-11 max-w-full min-w-0 items-center justify-center gap-2 rounded-lg border border-transparent bg-accent px-4 text-md font-semibold whitespace-nowrap text-white;
+}
+
+/* Resting visual of a medium-sized SFButton in the secondary variant. Same
+   contract as `sf-button-md-resting-accent` above. */
+@utility sf-button-md-resting-secondary {
+  @apply inline-flex h-11 max-w-full min-w-0 items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 text-md font-normal whitespace-nowrap text-secondary;
+}
+
+/* Shared gray/shadow "floating icon button" look used by SFSliderArrowButton
+   and SFScrollToTopButton. Size and rounding stay per-consumer (arrow buttons
+   are only rounded on their outer edge; scroll-to-top is a full circle). */
+@utility sf-icon-button-shadow {
+  @apply pointer-events-auto flex items-center justify-center overflow-hidden bg-gray-300 shadow-input transition hover:bg-gray-400 hover:shadow-hover focus-visible:focus-style aria-disabled:opacity-40 aria-disabled:shadow-none;
+}
+
+/* Shared footprint of a pagination item; state styling is layered inline. */
+@utility sf-pagination-item {
+  @apply inline-flex h-full w-10 items-center justify-center border-t-2 text-center text-md leading-none;
+}
+
+/* Skip-link pill: a bordered button-style link revealed on keyboard focus.
+   Focus styling is uniform across all skip links, so it lives here too. */
+@utility sf-skip-link {
+  @apply rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-secondary focus-visible:focus-style focus-visible:border-primary;
+}
+
+/* Supporting body at default size (no-results hints, basket popover empty copy,
+   delivery date labels). */
+@utility body-default-secondary {
+  @apply text-md font-normal text-secondary;
+}
+
+/* Lead paragraph at large size in primary color. */
+@utility body-large {
+  @apply text-lg font-normal text-primary;
+}
+
+/* Extra-large body in primary color at normal weight (PDP product name, shown
+   beneath the semibold brand heading). */
+@utility body-xlarge {
+  @apply text-2xl font-normal text-primary;
+}
+
+/* Empty-state descriptions, PDP secondary line, account intro copy. */
+@utility body-large-secondary {
+  @apply text-lg font-normal text-secondary;
+}
+
+/* Legal copy, form helpers, image captions, delivery notes under CTAs. Default tag:
+   p. Use span when inline next to another element (profile disclaimer banner). */
+@utility disclaimer {
+  @apply text-sm font-normal text-secondary;
+}
+
+/* Hide the native scrollbar on overflow scroll areas (sliders, dropdown lists,
+   toast stack, category tree, basket flyout item list). Scrolling still works. */
+@utility scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Safari and Chrome */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Display/opacity transitions with Tailwind starting: and [hidden]: (popover open,
+   slide-in panels, product card hover). Pair on the same element as starting:. */
+@utility transition-discrete {
+  transition-behavior: allow-discrete;
+}
+
+/* Unavailable variant swatch overlay (e.g. SFSiblingSelection). Absolute layer on
+   top of the swatch button, not on the label text. */
+@utility diagonal-strikethrough {
+  background: linear-gradient(
+    to left top,
+    transparent 49%,
+    currentColor,
+    currentColor,
+    transparent 52.25%
+  );
+}
+
+/* Horizontal scroll rows that fade their edges to hint at more content
+   (SFItemSlider `fade` prop: account chip row, PLP category chips). Each fade is
+   an absolute overlay shown only on the edge with content left to scroll.
+   The opaque stop defaults to white; set `--scroll-fade-color` on the slider
+   when it sits on a non-white background so the fade blends in. */
+@utility scroll-fade-left {
+  background: linear-gradient(
+    90deg,
+    var(--scroll-fade-color, var(--color-white)) 40%,
+    var(--color-transparent) 100%
+  );
+}
+
+@utility scroll-fade-right {
+  background: linear-gradient(
+    270deg,
+    var(--scroll-fade-color, var(--color-white)) 40%,
+    var(--color-transparent) 100%
+  );
+}
+
+/* Vertical scroll panels that need a fade at top and bottom (mobile nav drawer,
+   header basket popover). Requires overflow-y-auto on the same element. */
+@utility scroll-shadow {
+  background:
+    /* Shadow Cover TOP */
+    linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
+    /* Shadow Cover BOTTOM */ linear-gradient(rgba(255, 255, 255, 0), white 70%)
+      center bottom,
+    /* Shadow TOP */
+      radial-gradient(
+        farthest-side at 50% 0,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      center top,
+    /* Shadow BOTTOM */
+      radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      center bottom;
+  background-repeat: no-repeat;
+  background-size:
+    100% 40px,
+    100% 40px,
+    100% 14px,
+    100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* ============================================
+   CUSTOM VARIANTS
+   ============================================ */
+
+/* Loaded variant for body.loaded state */
+@custom-variant loaded (body.loaded &);
+
+/*
+  Product card wide enough for three sibling swatches and a two-digit "+N" text:
+  12px picker padding, three 48px swatches with 8px margins, then the text ends at
+  217px. Update it with the swatch size, margin, picker padding or "+N" font size.
+*/
+@custom-variant product-card-wide (@container product-card (width >= 13.625rem));
+
+/* ============================================
+   CONTAINER CONFIGURATION
+   ============================================ */
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 4);
+  @media (width >= theme(--breakpoint-lg)) {
+    padding-inline: calc(var(--spacing) * 7);
+    max-width: var(--container-7xl);
+  }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+/* Animates the open/close of a native `<details>` element via the
+   `::details-content` pseudo (Chrome 131+, Safari 26+, Firefox 138+).
+   `interpolate-size: allow-keywords` lets `block-size` animate to/from
+   `auto`; `transition-behavior: allow-discrete` carries the
+   `content-visibility` flip alongside the height. Older engines fall back
+   to an instant toggle — no JS height tracking either way. Mirrors the
+   discrete-property pattern in `SFPopover`. */
+@utility accordion-transition {
+  interpolate-size: allow-keywords;
+
+  &::details-content {
+    overflow: clip;
+    block-size: 0;
+    content-visibility: hidden;
+    transition:
+      block-size 200ms ease,
+      content-visibility 200ms allow-discrete;
+  }
+
+  &[open]::details-content {
+    block-size: auto;
+    content-visibility: visible;
+  }
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    @apply text-primary;
+  }
+  /*
+   * Force color inheritance for elements whose UA stylesheet sets a direct
+   * `color` value (e.g. `dialog` → `canvastext`), so the inherited body
+   * color isn't overridden by the UA-set property on the element itself.
+   * Form controls (`button, input, select, textarea, optgroup, ::file-selector-button`)
+   * are already covered by Tailwind preflight and don't need to be listed here.
+   */
+  dialog,
+  fieldset,
+  legend {
+    color: inherit;
+  }
+  *:focus-visible {
+    @apply focus-style;
+  }
+  /*
+   The native `<dialog>` carries `autofocus`, so `showModal()` focuses the dialog
+   itself instead of an interior control (prevents a spurious ring on the close
+   button on open). Keyboard-modality open would otherwise paint the global
+   focus ring around the whole dialog; suppress it. Interior controls still ring
+   on Tab.
+  */
+  dialog:focus-visible {
+    box-shadow: none;
+    outline: none;
+  }
+
+  /* This custom class is used to prevent the document body from scrolling, e.g. while having a popover opened. */
+  body:has(.block-scrolling) {
+    overflow: hidden;
+  }
+
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  /* `animate-pulse` reads this variable, so every loading placeholder stays
+     still under reduced motion without a `motion-safe:` variant at each use. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --animate-pulse: none;
+    }
+  }
+}
+
+/* ============================================
+   NAVIGATION PROGRESS BAR
+   ============================================
+   Inertia's progress bar, with `includeCSS: false` in `main.ts`. These rules
+   replace the inline `<style>` block Inertia would inject, which the
+   Content-Security-Policy's `style-src` does not allow. They mirror Inertia's
+   own CSS minus the spinner, which `main.ts` leaves disabled. Inertia renders
+   `#nprogress` as a popover, so the first rule undoes the browser's popover
+   styling. */
+#nprogress {
+  pointer-events: none;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  inset: unset;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#nprogress::backdrop {
+  display: none;
+}
+
+#nprogress .bar {
+  background: var(--color-accent);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow:
+    0 0 10px var(--color-accent),
+    0 0 5px var(--color-accent);
+  opacity: 1;
+  transform: rotate(3deg) translate(0, -4px);
+}

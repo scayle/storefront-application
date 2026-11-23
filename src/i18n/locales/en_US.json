@@ -1,0 +1,778 @@
+{
+  "price": {
+    "starting_from": "from",
+    "30_day_best_price": "30 day Best Price:",
+    "starting_from_with_amount": "from {amount}",
+    "originally": "Originally:",
+    "sale_label": "Sale:",
+    "info_trigger_a11y": "Show price information",
+    "information": {
+      "headline": "Price Information",
+      "current_cost": "How much this item currently costs:",
+      "first_offered": "The price at which the item was first offered by us:",
+      "lowest_30_days": "The lowest price in the last 30 days:",
+      "see_in_basket": "See the final price in the basket.",
+      "campaign_label": "Campaign \"{name}\":",
+      "promotion_label": "Promotion \"{name}\":"
+    }
+  },
+  "campaign": {
+    "deal": "Special"
+  },
+  "promotion": {
+    "condition": "Condition",
+    "free_label": "Free",
+    "ribbon": {
+      "a11y": {
+        "landmark": "Promotional banner"
+      }
+    },
+    "confirmation": {
+      "headline": "Promotion applied!",
+      "subline": "See your final price in the basket."
+    },
+    "deal": "Deal"
+  },
+  "promotion_banner": {
+    "locked": "Unlock your deal! Add eligible products to your cart to enjoy the offer.",
+    "unlocked": "Great job! You've unlocked the full deal and saved {amount}.",
+    "unlocked_buy_x_get_y": "Great job! You’ve unlocked the full deal. Select your item now and enjoy your reward."
+  },
+  "promotion_progress_wrapper": {
+    "remaining_minimum_order_value": "Unlock Your Deal! Spend {amount} more to activate this promotion.",
+    "fulfilled_promotion_condition": "You've unlocked a special offer! Add eligible products to your cart to enjoy the benefits.",
+    "partial_savings": "Nice work! You've unlocked a deal and saved {amount}. Keep shopping to unlock even more.",
+    "full_savings": "Great job! You’ve unlocked the full deal and saved {amount}.",
+    "free_gift": "Free gift"
+  },
+  "buy_x_get_y_products": {
+    "headline": "Don't Miss Your Deal!",
+    "description": "Select your item now and enjoy your reward.",
+    "a11y": {
+      "add_item": "Add your promotional product {name}"
+    }
+  },
+  "product_promotion_selection_modal": {
+    "details": "Details"
+  },
+  "a11y": {
+    "navigated_to": "Navigated to {title}",
+    "skip_links": "Skip links"
+  },
+  "common": {
+    "sold_out": "Sold out",
+    "sold_out_long": "Currently sold-out online.",
+    "welcome": "Welcome, {name}!",
+    "back_to_shop": "Back to shop",
+    "to_shop": "To shop",
+    "sign_out": "Sign Out",
+    "sign_in": "Sign In",
+    "continue_shopping": "Continue shopping",
+    "sign_up": "Register",
+    "account": "Open account options",
+    "skip_to_main_content": "Skip to main content",
+    "skip_to_search": "Skip to search",
+    "skip_to_basket": "Skip to basket"
+  },
+  "account": {
+    "page": {
+      "title": "Your account"
+    },
+    "tabs": {
+      "orders": "Your orders",
+      "profile": "Your profile",
+      "subscriptions": "Your subscriptions",
+      "short": {
+        "orders": "Orders",
+        "subscriptions": "Subscriptions",
+        "profile": "Profile"
+      }
+    },
+    "orders": {
+      "title": "Your orders",
+      "meta": {
+        "title": "@:account.orders.title"
+      },
+      "empty_state": {
+        "title": "No orders yet",
+        "description": "Once you place an order, you will find it here."
+      },
+      "card": {
+        "title": "Order #{id}",
+        "order_date": "Order Date",
+        "items": "Items"
+      },
+      "status": {
+        "open": "Open",
+        "confirmed": "Confirmed",
+        "shipped": "Shipped",
+        "cancelled": "Cancelled"
+      }
+    },
+    "order_detail": {
+      "title": "Order #{id}",
+      "meta": {
+        "title": "@:account.order_detail.title",
+        "description": "View details and status of your order #{id}."
+      },
+      "order_details": {
+        "title": "Order Details",
+        "order_date": "Order Date"
+      },
+      "payment_details": {
+        "title": "Payment Details",
+        "payment_method": "Payment Method"
+      },
+      "address_details": {
+        "delivery_and_billing_address": "Delivery & Billing Address",
+        "delivery_address": "Delivery Address",
+        "billing_address": "Billing Address"
+      },
+      "product": {
+        "color": "Color",
+        "size": "Size"
+      },
+      "payment_summary": {
+        "subtotal": "Subtotal",
+        "shipping_costs": "Shipping",
+        "other_fees": "Other fees",
+        "total": "Total"
+      }
+    },
+    "profile": {
+      "title": "Your profile",
+      "meta": {
+        "title": "@:account.profile.title"
+      },
+      "description": "Manage your profile.",
+      "personal_information": {
+        "title": "Personal Information",
+        "description": "Update your personal details to keep your account up to date.",
+        "success_message": "Your data has been successfully updated.",
+        "error_message": "The information couldn't be saved. Please try again.",
+        "no_changes": "No changes to save."
+      },
+      "account_information": {
+        "title": "Account Information",
+        "customer_number": "Customer Number",
+        "email": "Email",
+        "disclaimer": "Your email address and customer number cannot be changed here. Please contact support for assistance."
+      },
+      "password_management": {
+        "title": "Password Management",
+        "description": "Keep your account secure by updating your password regularly.",
+        "idp_description": "Your account is secured through an external login provider, so changing your password here isn't necessary. To update your password, please visit your login provider's settings.",
+        "success_message": "Your password has been successfully updated.",
+        "error": {
+          "400_bad_request": "Your request could not be processed, please try again.",
+          "wrong_password": "Your current password is not correct."
+        }
+      },
+      "saving": "Saving…"
+    },
+    "form_fields": {
+      "gender": "Gender",
+      "gender_options": {
+        "male": "Male",
+        "female": "Female",
+        "diverse": "Diverse",
+        "none": "Prefer not to say"
+      },
+      "first_name": "First name",
+      "last_name": "Last name",
+      "birth_date": "Date of birth",
+      "old_password": "Current password",
+      "new_password": "New password"
+    },
+    "validation": {
+      "required": "{field} is required.",
+      "past_date": "{field} cannot have date that is in future.",
+      "password": "Your password must have 8 to 70 characters with no spaces, and include an uppercase letter, a lowercase letter, a number, and a special character.",
+      "date": "{field} must be a valid date.",
+      "form_error_summary": "{count} field needs your attention. | {count} fields need your attention."
+    },
+    "a11y": {
+      "menu": "Account menu"
+    }
+  },
+  "badge_labels": {
+    "new": "New in",
+    "already_in_basket": "Already in basket",
+    "low_stock": "Low Stock"
+  },
+  "promotion_slide_in": {
+    "open_button": {
+      "no_active_promotions_title": "Your Deals",
+      "active_promotions_title": "Your Deals – {total} Active Promotions"
+    },
+    "headline": "Your Deals",
+    "subline": "Find discounted products by clicking on any promotion. Discover constantly changing deals on selected items.",
+    "no_active_subline": "You currently have no active promotions. Check back later for new deals and special offers!"
+  },
+  "country_detection": {
+    "headline": "Looks like you're in {detectedCountry}",
+    "subline_single_language": "You're shopping in {currentCountry}. Prices, delivery and payment options may differ by country.",
+    "subline_multi_language": "You're shopping in {currentCountry}. Choose your language for {detectedCountry}.",
+    "shop_in_country": "Shop in {detectedCountry}",
+    "stay_in_country": "Stay in {currentCountry}",
+    "override_codes": {
+      "ZZ": "International"
+    }
+  },
+  "shop_selector": {
+    "aria_label": "Change shop, current shop: {selectedCountry}, {selectedLanguage}",
+    "flyout_title": "Language and Country",
+    "choose_language": "Choose your language",
+    "choose_country": "Choose your country",
+    "current_shop_indicator": ", current shop"
+  },
+  "error": {
+    "error_code_label": "Error Code:",
+    "page_not_found_title": "Page not found.",
+    "page_not_found_message": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "unknown_error_title": "Oh - something went wrong",
+    "unknown_error_message": "Your request could not be processed, please try again later.",
+    "technical_details_title": "Technical error details"
+  },
+  "global": {
+    "close": "Close",
+    "including_vat": "incl. VAT.",
+    "sold_out": "Sold out",
+    "scroll_to_top_label": "Scroll to top",
+    "play_video": "Play video",
+    "days": "day | days",
+    "hours": "hour | hours",
+    "minutes": "minute | minutes",
+    "seconds": "second | seconds",
+    "back": "Back",
+    "quantity": "Quantity",
+    "excluding_vat": "excl. VAT.",
+    "search": "Search",
+    "cancel": "Cancel",
+    "search_results": "Search results",
+    "search_results_loading": "Loading search results",
+    "search_no_results": "No results found",
+    "search_results_count": "No results | {count} result found | {count} results found",
+    "search_redirecting": "Redirecting to results",
+    "payment_key": {
+      "default": "Credit Card",
+      "accounting": "Invoice Payment",
+      "paypal": "PayPal",
+      "klarna_paylater": "Klarna Pay Later",
+      "klarna_paynow": "Klarna Pay Now",
+      "klarna_installments": "Klarna Installments"
+    },
+    "carrier_key": {
+      "DEFAULT": "UPS",
+      "DHL": "DHL",
+      "DHL_STD_NATIONAL": "DHL",
+      "HERMES": "Hermes",
+      "HERMES_STD_NATIONAL": "Hermes"
+    },
+    "save": "Save",
+    "days_short": "d | d",
+    "hours_short": "hr | hrs",
+    "minutes_short": "min | min",
+    "seconds_short": "sec | sec",
+    "seo_title_with_shop_name": "{title} {'|'} {shopName}",
+    "required": "required",
+    "clear": "Clear"
+  },
+  "cms_page": {
+    "hero_image_alt": "Shop built with the Storefront Application, shown on desktop and mobile"
+  },
+  "search_input": {
+    "placeholder": "Search for product, category or brand"
+  },
+  "text_input": {
+    "password": {
+      "show": "Show password",
+      "hide": "Hide password"
+    }
+  },
+  "chip": {
+    "remove": "Remove",
+    "remove_item": "Remove {name}"
+  },
+  "product_suggestion_list": {
+    "title": "Products"
+  },
+  "category_suggestion_list": {
+    "title": "Categories"
+  },
+  "navigation_item_suggestion_list": {
+    "title": "Pages"
+  },
+  "show_all_results_link": {
+    "open_on_search_page": "See all {searchTerm} results"
+  },
+  "add_to_basket": {
+    "add_to_basket": "Add to basket",
+    "coming_soon": "Available from {startDate}",
+    "no_longer_available": "Product no longer available",
+    "notification": {
+      "add_to_basket_success": "{productName} has been added to your basket",
+      "add_to_basket_error": "{productName} could not be added to your basket",
+      "add_to_basket_variant_out_of_stock_error": "This size is currently out of stock",
+      "add_to_basket_max_basket_items_error": "Oops! You've reached the maximum number of items allowed in your basket.",
+      "added_with_reduced_quantity": "Sorry, there are no more items available in this size. All available stock has already been added to your basket.",
+      "remove_basket_item_success": "Item was removed from the basket.",
+      "remove_basket_item_error": "Item could not be removed from the basket.",
+      "update_basket_item_quantity_error": "Quantity could not be updated.",
+      "update_basket_item_quantity_success": "Quantity updated."
+    },
+    "a11y": {
+      "select_size": "Please select a size first"
+    }
+  },
+  "add_to_basket_slide_in": {
+    "title": "Successfully added to your basket",
+    "recommendations_title": "Things you might like"
+  },
+  "slider": {
+    "go_to_previous_item": "Previous",
+    "go_to_next_item": "Next",
+    "a11y": {
+      "visible_range": "Showing items starting at {start} of {total}",
+      "skip_to_start": "Skip to beginning of the carousel",
+      "skip_to_end": "Skip the carousel",
+      "products_label": "Products",
+      "carousel_label": "Carousel",
+      "go_to_slide": "Go to slide {index} of {total}"
+    }
+  },
+  "pagination": {
+    "a11y": {
+      "go_to_previous_page": "Go to the previous page",
+      "go_to_next_page": "Go to the next page",
+      "go_to_page": "Go to page {page}",
+      "label": "Pagination",
+      "page_status": "Page {current} of {total}"
+    }
+  },
+  "product_list_no_results": {
+    "title": "No results 🫣",
+    "description": "There are no products in this category or your selected filters don’t result in products.",
+    "reset_filters": "Reset filters",
+    "back_to_category": "Back to {category}"
+  },
+  "sorting_select": {
+    "top_seller": "Recommendations",
+    "date_newest": "Newest",
+    "price_desc": "Price descending",
+    "price_asc": "Price ascending",
+    "reduction_desc": "Reduction descending",
+    "relevance": "Relevance"
+  },
+  "image_view_selection": {
+    "label": "View",
+    "default": "Default"
+  },
+  "search_page": {
+    "title": "Products for \"{term}\"",
+    "meta": {
+      "title": "Products for \"{term}\""
+    },
+    "a11y": {
+      "result_count": "{count} result | {count} results"
+    },
+    "term_too_long": "Your search is too long. Try a shorter search term.",
+    "no_results": {
+      "title": "No products to show here",
+      "tip": "Check the spelling or try a shorter, more general search term."
+    }
+  },
+  "filter_header": {
+    "title": "Filter categories"
+  },
+  "filter_actions": {
+    "show_results_with_count": "View {count} items",
+    "show_results": "View items",
+    "reset_all_filter": "Reset all"
+  },
+  "filter_slide_in_content": {
+    "sorting": "Sorting",
+    "only_sale_option": "Show only sale products"
+  },
+  "filter_group": {
+    "reset": "Reset filter"
+  },
+  "filter": {
+    "notification": {
+      "all_filters_cleared": "All filters are cleared!",
+      "filter_updated": "Your filters have been successfully applied!",
+      "sort_updated": "Your sorting has been successfully applied!",
+      "filter_and_sort_updated": "Your sorting and filters have been successfully applied!"
+    },
+    "show_filter": "Show Filters",
+    "show_filter_and_sorting": "Show Filters & Sorting",
+    "a11y": {
+      "toggle_with_count": "{label}, {count} active"
+    }
+  },
+  "filter_range_slider": {
+    "to": "to",
+    "price": {
+      "maximum": "Maximum price: {price}",
+      "minimum": "Minimum price: {price}"
+    },
+    "percentage": {
+      "maximum": "Maximum reduction: {reduction}",
+      "minimum": "Minimum reduction: {reduction}"
+    },
+    "a11y": {
+      "value_clamped_to_min": "Value adjusted to the allowed minimum",
+      "value_clamped_to_max": "Value adjusted to the allowed maximum"
+    }
+  },
+  "footer": {
+    "copyright": "© {currentYear} SCAYLE, All rights reserved",
+    "privacy_settings": "Privacy Settings",
+    "a11y": {
+      "primary_nav": "Footer",
+      "legal_nav": "Legal links"
+    }
+  },
+  "navigation": {
+    "a11y": {
+      "side_navigation": "Open side navigation",
+      "close_side_navigation": "Close side navigation",
+      "category_navigation": "Category navigation",
+      "category_list": "Category list",
+      "home_link": "Go to homepage",
+      "home_link_disabled": "You are on the homepage",
+      "main": "Main",
+      "header": "Header",
+      "breadcrumb": "Breadcrumb",
+      "mobile_categories": "Mobile categories",
+      "back_to_main_menu": "Back to main menu",
+      "show_subcategories": "{name}, show subcategories",
+      "show_submenu": "Show {name} submenu"
+    },
+    "breadcrumb": {
+      "item_count": "{count} item | {count} items"
+    }
+  },
+  "notification": {
+    "view": "View",
+    "reload": "Reload",
+    "error": {
+      "http_exception": "Something went wrong. Please try again.",
+      "network_error": "Request failed. Please try again later."
+    },
+    "dismiss": "Dismiss notification"
+  },
+  "product_image": {
+    "alt": "{brand}, {productName}, {colors}",
+    "alt_with_image_index": "{alt}, Image {index} of {total}",
+    "a11y": {
+      "zoom_dialog_label": "Product image, enlarged view",
+      "grid_label": "{name}, product gallery",
+      "enlarge_image": "Enlarge image {index} of {total}",
+      "zoomed_gallery_label": "{name}, product gallery (zoomed)",
+      "slide_position": "{current} of {total}"
+    }
+  },
+  "product_video": {
+    "json_ld_name": "{name} (Video {index})",
+    "a11y": {
+      "slide_label": "{name}, video {index} of {total}"
+    }
+  },
+  "image_slider": {
+    "a11ly": {
+      "go_to_previous_image": "Previous image",
+      "go_to_next_image": "Next image",
+      "carousel_label": "Product gallery",
+      "image_position": "Image {current} of {total}",
+      "go_to_image": "Go to image {index}",
+      "list_label": "Product images"
+    }
+  },
+  "quantity_input": {
+    "change_value_to": "Change quantity to {newQuantity}"
+  },
+  "product_attribute": {
+    "size": "Size",
+    "color": "Color"
+  },
+  "sibling_selection": {
+    "sibling_error": "Error: This attribute is not set!",
+    "selected": "Selected",
+    "unselected": "Unselected",
+    "a11y": {
+      "alt_text": "{selected}, {alt}",
+      "sold_out_alt_text": "{selected}, {alt} (Sold-out)",
+      "previous_color": "Previous color",
+      "next_color": "Next color"
+    }
+  },
+  "low_stock": {
+    "few_items_left": "Only a few items left!",
+    "x_left": "Only {count} left!"
+  },
+  "product_detail": {
+    "sellable_in_past": "Product Archived. This product is no longer available to purchase.",
+    "sellable_in_future": "Coming Soon! This product is not yet available to purchase."
+  },
+  "variant_picker": {
+    "select_size": "Select Size",
+    "option": {
+      "select_option": "Select size {option}"
+    }
+  },
+  "product_details": {
+    "information": {
+      "fit_size": "Fit & Size",
+      "extras": "Extra",
+      "design": "Design"
+    },
+    "shipping_return_heading": {
+      "title": "Shipping and return",
+      "general_info": "The postage for shipping and returning articles, as well as the packaging costs, will be covered by SCAYLE. Orders with multiple products may result in partial deliveries.",
+      "dhl_headline": "DHL Standard Shipping - 0,00 EUR",
+      "dhl_paragraph": "Immediately available items are usually delivered by DHL within 1-3 business days.",
+      "hermes_headline": "Hermes – 0,00 EUR",
+      "hermes_paragraph": "Immediately available items are usually delivered by Hermes within 1-3 business days.",
+      "return_information": "If the return label is missing from your delivery, you can request a new one from our customer service at any time."
+    }
+  },
+  "sign_in_page": {
+    "title": "Welcome! New here or coming back?",
+    "meta": {
+      "title": "Login or Register",
+      "description": "Access your account or create a new one on {shopName}. Enjoy a seamless shopping experience with secure login and personalized options."
+    }
+  },
+  "authentication": {
+    "notification": {
+      "success": {
+        "login": "Login successful! Welcome back!",
+        "sign_up": "Your account has been successfully created!",
+        "reset_password": "Your password has been successfully reset. You can now log in with your new password.",
+        "guest_login": "Your account has been created! You can now proceed with your order."
+      },
+      "error": {
+        "logout": "Error while logging out. Please try again."
+      }
+    }
+  },
+  "product_detail_page": {
+    "meta": {
+      "title": "{productName}",
+      "description": "Buy {productName} online at {shopName}. Discover the wide selection of other branded products."
+    },
+    "similar_products": "Similar Products",
+    "trending_products": "Trending in this Category"
+  },
+  "product_list_page": {
+    "meta": {
+      "title": "{listingTitle}",
+      "description": "Buy {category} at {shopName}. Discover a wide range of {category}",
+      "page": "Page {pageNumber}"
+    }
+  },
+  "wishlist_page": {
+    "meta": {
+      "title": "Your Wishlist",
+      "description": "Save your favorite products and keep track of your must-haves."
+    },
+    "title": "Wishlist",
+    "empty_title": "You have no items in your wishlist.",
+    "empty_description": "Save your favorite products and keep track of your must-haves.",
+    "a11y": {
+      "title": "Wishlist | Wishlist, {count} item | Wishlist, {count} items",
+      "empty_actions": "Wishlist actions"
+    },
+    "notification": {
+      "toggle_error": "Could not update your wishlist. Please try again."
+    }
+  },
+  "basket_page": {
+    "title": "Basket",
+    "empty_basket_title": "Your shopping cart is empty.",
+    "empty_basket_description": "Your products will appear as soon as you add them to your cart.",
+    "a11y": {
+      "title": "Basket | Basket, {count} item | Basket, {count} items"
+    },
+    "meta": {
+      "title": "Basket",
+      "description": "Review your items and continue to checkout."
+    }
+  },
+  "basket": {
+    "go_to_basket": "Go to Basket",
+    "go_to_checkout": "Go to Checkout",
+    "unavailable_products": "Unavailable products",
+    "size_selector": {
+      "notification": {
+        "error": "Size could not be updated. Please try again.",
+        "success": "Size updated.",
+        "success_merged": "Size updated. Combined with the same item already in your basket.",
+        "previous_size_kept": "New size added. The previous size could not be removed and is still in your basket.",
+        "reduced_quantity": "Only {count} item is left in this size, so the quantity was adjusted. | Only {count} items are left in this size, so the quantity was adjusted."
+      },
+      "a11y": {
+        "select_size": "Change size for {name}"
+      }
+    },
+    "a11y": {
+      "active_promotions": "Active promotions",
+      "item_removed": "{name} removed from your basket",
+      "quantity_changed": "Quantity for {name} changed to {count}",
+      "size_changed": "Size for {name} changed to {size}",
+      "size_change_failed": "Could not change the size for {name}. Please try again.",
+      "remove_failed": "Could not remove {name}. Please try again."
+    }
+  },
+  "basket_card": {
+    "remove_from_basket_confirmation": "Are you sure you want to remove this item?",
+    "remove_from_basket_confirmation_description": "Are you sure you want to remove this item from your basket?",
+    "confirm_removal": "Remove item",
+    "remove_item": "Remove {name} from basket"
+  },
+  "basket_summary": {
+    "discount": "Discounts",
+    "delivery_fees": "* Delivery fees will be determined during checkout after you choose a preferred delivery option.",
+    "you_pay": "You pay",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery"
+  },
+  "basket_summary_reduction": {
+    "sale": "Sale",
+    "voucher": "Voucher"
+  },
+  "basket_promotion_codes": {
+    "headline": "Promotion Codes",
+    "add_code": "Add",
+    "remove_code": "Remove {code}",
+    "input_placeholder": "Code",
+    "input_label": "Promotion code",
+    "add_success": "Your code has been applied successfully.",
+    "add_error": "Unfortunately, adding the promotion code failed.",
+    "remove_error": "Unfortunately, removing the promotion code failed."
+  },
+  "order_success_page": {
+    "title": "Your order overview",
+    "meta": {
+      "title": "Order confirmed! Thank you for your purchase",
+      "description": "Thank you for your order! Your purchase is confirmed. Check your email for the order details."
+    },
+    "no_order_found": {
+      "title": "The order information could not be found.",
+      "meta": {
+        "title": "@:order_success_page.no_order_found.title"
+      },
+      "description": "Your order details could not be retrieved. The link may have expired or is invalid. Please check your email for the correct link or contact support for assistance."
+    },
+    "go_to_order_details": "Order details"
+  },
+  "order_success_page_greeting": {
+    "title": "Thank you for your purchase!",
+    "email_confirmation": "The order confirmation has been sent to the email address you provided."
+  },
+  "order_information": {
+    "order_details": {
+      "title": "Order Details",
+      "order_date": "Order Date",
+      "order_number": "Order Number",
+      "order_number_value": "Order #{orderNumber}",
+      "estimated_delivery_date": "Expected delivery",
+      "delivered_by": "Shipped by:",
+      "customer_id": "Customer Number"
+    },
+    "payment_details": {
+      "title": "Payment Details",
+      "payment_method": "Payment Method"
+    },
+    "address_details": {
+      "delivery_and_billing_address": "Delivery & Billing Address",
+      "delivery_address": "Delivery Address",
+      "billing_address": "Billing Address"
+    },
+    "payment_summary": {
+      "subtotal": "Subtotal",
+      "shipping_costs": "Shipping costs",
+      "other_fees": "Other fees",
+      "total": "Total"
+    }
+  },
+  "expressCheckout": {
+    "error": {
+      "deviceNotSupported": "The given device is not allowed.",
+      "paymentMethodNotAvailable": "The selected payment method is not available.",
+      "pspSessionCreationFailed": "Failed to create payment service provider session.",
+      "failedToFetchSession": "Unable to fetch a valid session from the payment service provider.",
+      "basketNotFound": "Basket was not found.",
+      "basketInvalid": "The basket is invalid.",
+      "failedDependency": "Failed to update transaction.",
+      "unknownError": "Something went wrong. Please try again.",
+      "errorShippingAddressValidationFailed": "Shipping address validation failed.",
+      "outOfConstraints": "The basket total is outside allowed order value."
+    }
+  },
+  "recentlyViewedProductsSlider": {
+    "title": "Recently Viewed"
+  },
+  "countdown": {
+    "days_left": "{count} Day left | {count} Days left",
+    "ends_in": "Ends in:"
+  },
+  "checkout_page": {
+    "meta": {
+      "title": "Checkout",
+      "description": "Complete your order."
+    }
+  },
+  "subscription": {
+    "label": "Subscription",
+    "interval": "Interval",
+    "follow_up_delivery": "Follow-up delivery",
+    "day_of_month_selection_caption": "{dayOfMonth} of the month",
+    "ordinal_suffix": {
+      "one": "st",
+      "two": "nd",
+      "few": "rd",
+      "other": "th"
+    },
+    "product": {
+      "subscribe": "Subscribe & Save",
+      "select_size": "Select a size to see subscription options",
+      "not_eligible": "This variant is not available as a subscription",
+      "separation_text": "Or save even more:",
+      "add_to_basket": "Subscribe for {interval}"
+    },
+    "page": {
+      "headline": "My Subscriptions",
+      "meta": {
+        "title": "My Subscriptions",
+        "description": "Manage your subscriptions"
+      }
+    },
+    "order_notice": {
+      "title": "Includes subscription items.",
+      "text": "This order contains subscription products. Manage deliveries and cancellations under your subscriptions.",
+      "link": "Go to subscriptions"
+    },
+    "cancellation": {
+      "meta": {
+        "title": "Cancel Subscription",
+        "description": "Manage your subscription cancellation"
+      }
+    }
+  },
+  "range_slider": {
+    "a11y": {
+      "thumb_minimum": "Minimum value",
+      "thumb_maximum": "Maximum value"
+    }
+  },
+  "wishlist_toggle": {
+    "a11y": {
+      "add_to_wishlist": "Add {name} to wishlist",
+      "remove_from_wishlist": "Remove {name} from wishlist",
+      "removed_announcement": "{name} removed from your wishlist"
+    }
+  }
+}

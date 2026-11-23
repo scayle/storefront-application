@@ -1,0 +1,232 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='Getting Started' />
+
+<style>
+  {`
+    .sbdocs-content {
+      max-width: 2000px;
+    }
+
+    li::marker {
+      color: #86efac;
+    }
+
+    .headline {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 1024px) {
+      .headline {
+        font-size: 72px;
+      }
+    }
+
+    .link {
+      color: #000;
+      font-size: 20px;
+    }
+
+    .link svg {
+      color: #000;
+    }
+  `}
+</style>
+
+<div className="flex flex-col gap-8">
+  <section className="mb-10 overflow-hidden border-b border-gray-200">
+    <div className="mx-auto flex w-full flex-col lg:flex-row">
+      <div className="shrink-0 py-4 text-secondary lg:w-1/2 lg:py-10 lg:pr-12">
+        <p className="mb-4 font-bold">SCAYLE Commerce Engine</p>
+        <h1 className="headline">Storefront Application V3</h1>
+        <div className="mb-10 max-w-[46.875rem] leading-8 lg:pr-12">
+          Storefront Application V3 is the starter application for building
+          high-performance shops on the SCAYLE Commerce Engine. It runs on Hono,
+          Inertia.js, and Vue 3, and is styled with Tailwind CSS v4.
+        </div>
+        <a
+          className="link flex items-center gap-2 font-bold"
+          href="https://scayle.dev/storefront"
+          target="_blank"
+        >
+          SCAYLE Resource Center
+          <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.77344 1.37521L9.89823 5.5L5.77344 9.62479" stroke="#000" strokeWidth="1.6" strokeLinecap="square"></path></svg>
+        </a>
+      </div>
+      <div className="self-end">
+        <img
+          className="lg:-ml-12"
+          src="hero.avif"
+          alt="Storefront Application product listing page on desktop and mobile"
+        />
+      </div>
+    </div>
+  </section>
+
+<div className='flex flex-col gap-2'>
+  {/* prettier-ignore */}
+  <h2 className='flex items-center gap-2 font-bold'><img src='logo.svg' alt='SCAYLE' /> Storefront Application V3 Component Library</h2>
+  <div>
+    This Storybook shows the Vue components of Storefront Application V3 in
+    isolation from the running shop. Use it to browse components, try their
+    props and states, and check them for accessibility issues while you build or
+    customize your storefront.
+  </div>
+</div>
+
+<div className='flex flex-col gap-2'>
+  <h2 className='font-bold'>How the stories are organized</h2>
+  <div>
+    Stories for components under <code>src/client/components/</code> take their
+    title from the component's path, so{' '}
+    <code>components/ui/core/SFButton.vue</code> appears as{' '}
+    <code>UI/Core/SFButton</code>. Every component has an{' '}
+    <strong>Overview</strong> page with its props and stories.
+  </div>
+  <ul>
+    <li>
+      <strong>UI</strong>: base components such as buttons, inputs, and dialogs,
+      which the other components build on.
+    </li>
+    <li>
+      <strong>Feature groups</strong> such as <strong>Product</strong>,{' '}
+      <strong>Basket</strong>, <strong>Search</strong>, and{' '}
+      <strong>Account</strong>: components that belong to one area of the shop.
+    </li>
+    <li>
+      <strong>CMS Amplience</strong>, <strong>CMS Contentful</strong>,{' '}
+      <strong>CMS Contentstack</strong>, and <strong>CMS Storyblok</strong>:
+      content blocks from <code>src/client/cms/providers/</code>, grouped by CMS
+      provider.
+    </li>
+    <li>
+      <strong>Assets</strong>: the icon set from{' '}
+      <code>src/client/assets/icons/</code>.
+    </li>
+  </ul>
+</div>
+
+<div className='flex flex-col gap-2'>
+  <h2 className='font-bold'>What is Storybook?</h2>
+  <div>
+    Storybook is a development tool for building, testing, and documenting UI
+    components in isolation. Each story renders a component in one state, so you
+    can develop and review that state without running the whole application.
+  </div>
+</div>
+
+<div className='flex flex-col gap-4'>
+  <div className='rounded-lg bg-gray-200 px-8 py-4'>
+    <h3>🚀 Get Started</h3>
+    <p>Write a story for a Storefront Application component.</p>
+    <a
+      className='font-bold'
+      href='https://storybook.js.org/docs/get-started/whats-a-story#create-a-new-story'
+      target='_blank'
+    >
+      Create a new story
+    </a>
+  </div>
+  <div className='rounded-lg bg-gray-200 px-8 py-4'>
+    <h3>🧩 Components</h3>
+    <p>Browse all components and see usage examples and props.</p>
+  </div>
+  <div className='rounded-lg bg-gray-200 px-8 py-4'>
+    <h3>🎨 Theming</h3>
+    <div>
+      Change colors, fonts, and spacing through the Tailwind CSS v4 design
+      tokens in <code>src/client/design-tokens.css</code>.
+    </div>
+    <a
+      className='font-bold'
+      href='https://tailwindcss.com/docs/theme'
+      target='_blank'
+    >
+      Learn about theme variables
+    </a>
+    <br />
+    <a
+      className='font-bold'
+      href='https://www.figma.com/community/file/1704456348909703435/scayle-storefront-design-system'
+      target='_blank'
+    >
+      Open the SCAYLE Storefront Design System on Figma
+    </a>
+  </div>
+</div>
+
+<div className='flex flex-col gap-4'>
+  <h2 className='font-bold'>Storybook addons</h2>
+  <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+    <div className='rounded-lg border border-gray-200 px-8 py-4'>
+      <h3>Auto-docs</h3>
+      <p>Automatically generate documentation for your components.</p>
+      <a
+        className='font-bold'
+        href='https://storybook.js.org/docs/writing-docs/autodocs'
+        target='_blank'
+      >
+        Learn more about Auto-docs
+      </a>
+    </div>
+    <div className='rounded-lg border border-gray-200 px-8 py-4'>
+      <h3>Accessibility</h3>
+      <p>Check your components for accessibility issues.</p>
+      <a
+        className='font-bold'
+        href='https://storybook.js.org/docs/writing-tests/accessibility-testing'
+        target='_blank'
+      >
+        Learn more about accessibility testing
+      </a>
+    </div>
+    <div className='rounded-lg border border-gray-200 px-8 py-4'>
+      <h3>Interactions</h3>
+      <p>Test your components with interactions.</p>
+      <a
+        className='font-bold'
+        href='https://storybook.js.org/docs/writing-tests/interaction-testing'
+        target='_blank'
+      >
+        Learn more about interaction testing
+      </a>
+    </div>
+    <div className='rounded-lg border border-gray-200 px-8 py-4'>
+      <h3>Actions</h3>
+      <p>Add actions to your components.</p>
+      <a
+        className='font-bold'
+        href='https://storybook.js.org/docs/essentials/actions'
+        target='_blank'
+      >
+        Learn more about actions
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div className="flex flex-col gap-4">
+    <h2 className="font-bold">Storybook Resources & Tips</h2>
+    <div className="grid gap-8 md:grid-cols-2">
+      <div>
+        <h3>Official Documentation</h3>
+        <ul>
+          <li><a className="font-bold" href="https://storybook.js.org/docs" target="_blank">Storybook Documentation</a></li>
+          <li><a className="font-bold" href="https://storybook.js.org/docs/get-started/frameworks/vue3-vite" target="_blank">Storybook for Vue with Vite</a></li>
+          <li><a className="font-bold" href="https://storybook.js.org/docs/writing-stories" target="_blank">Writing Stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Best Practices</h3>
+        <ul>
+          <li>Use controls for interactive props</li>
+          <li>Write clear component descriptions</li>
+          <li>Include usage examples</li>
+          <li>Document component variants</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

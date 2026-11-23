@@ -1,0 +1,208 @@
+/*
+ * Storefront Design System tokens, taken from the SCAYLE Storefront Design System on Figma:
+ * https://www.figma.com/community/file/1704456348909703435/scayle-storefront-design-system
+ * Source of truth for Tailwind @theme values. Import from index.css only.
+ *
+ * Figma groups map to CSS namespaces:
+ * - Colors/* → --color-*
+ * - Spacing/Blocks/* → --spacing-*
+ * - Border/Radius/* → --radius-* (Figma `rounded`, 4px = `rounded-sm`)
+ * - Border/Width/* → Tailwind's bare-value border-* and outline-* widths
+ */
+
+/*
+ * Static breakpoints are not removed by Tailwind, so `useDefaultBreakpoints.ts`
+ * can read them at runtime. This is the full set; keep the keys it and
+ * config/ui.ts BREAKPOINTS declare in sync with the values here.
+ */
+@theme static {
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
+
+@theme {
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  --font-sans: 'Inter Variable', 'Inter', sans-serif;
+
+  /* Drops Tailwind's default type scale, so only the sizes below compile. */
+  --text-*: initial;
+
+  --text-sm: 0.75rem;
+  --text-sm--line-height: 1rem;
+
+  --text-md: 0.875rem;
+  --text-md--line-height: 1.125rem;
+
+  --text-lg: 1rem;
+  --text-lg--line-height: 1.25rem;
+
+  --text-xl: 1.125rem;
+  --text-xl--line-height: 1.375rem;
+
+  --text-2xl: 1.25rem;
+  --text-2xl--line-height: 1.75rem;
+
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: 2rem;
+
+  /* ========================================
+     COLORS — Core (Figma: Colors/Core/*)
+     ======================================== */
+
+  /* Drops Tailwind's default palette, so only the colors below compile. */
+  --color-*: initial;
+
+  --color-inherit: inherit;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+
+  --color-gray-100: #fafafa;
+  --color-gray-200: #f2f2f2;
+  --color-gray-300: #ebebeb;
+  --color-gray-400: #d9d9d9;
+  --color-gray-500: #a8a8a8;
+
+  /* ========================================
+     COLORS — Accent (Figma: Colors/Accent/*)
+     ======================================== */
+
+  --color-primary: #171717;
+  --color-secondary: #666666;
+  --color-accent: #5328e1;
+  --color-promotion: #aeecef;
+  --color-promotion-light: #dff7f9;
+  --color-campaign: #ffc65f;
+  --color-campaign-light: #ffe8bf;
+
+  /* ========================================
+     COLORS — Functional (Figma: Colors/Functional/*)
+     ======================================== */
+
+  --color-product-sale: #cc301f;
+
+  --color-status-success-light: #cef5e8;
+  --color-status-success: #0dcc8d;
+  --color-status-alert-light: #fadbd8;
+  --color-status-alert: #d42411;
+  --color-status-info: #ccbff6;
+  --color-status-warning-light: #fdecce;
+  --color-status-warning: #f59e0b;
+
+  /* ========================================
+     COLORS — Semantic (Figma: Checkbox, Color Swatch)
+     ======================================== */
+
+  --color-disabled: #a8a8a8;
+  --color-disabled-background: #f2f2f2;
+  --color-disabled-border: #d9d9d9;
+  /*
+   * Keyboard focus indicator, drawn as a two-tone band by the `focus-style`
+   * utility: `--color-focus` in the middle, `--color-focus-halo` on both
+   * sides of it. No single tone clears the 3:1 that WCAG 2.2 SC 1.4.11 asks
+   * for against every surface a ring can land on, so the pairing is what
+   * makes the indicator visible on white, on gray, on a campaign banner and
+   * on a filled button alike. Retheme both together or neither.
+   */
+  --color-focus: #171717;
+  --color-focus-halo: #ffffff;
+  --color-alert: #d42411;
+
+  /*
+   * Backdrop behind product imagery (tiles, PDP gallery, thumbnails, basket
+   * rows). Kept separate from the gray scale so it can be retinted without
+   * touching the many unrelated `gray-100` surfaces.
+   */
+  --color-product-image-background: #f4f4f5;
+
+  /* Inactive pagination dot / indicator (semantic alias of the gray scale). */
+  --color-dot-inactive: var(--color-gray-400);
+
+  /* ========================================
+     SPACING & SIZING (Figma: Spacing/Blocks/* + layout sizes)
+     ======================================== */
+
+  /* Figma block scale */
+  --spacing-0_5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1_5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+  --spacing-36: 9rem;
+  --spacing-40: 10rem;
+  --spacing-44: 11rem;
+  --spacing-48: 12rem;
+  --spacing-52: 13rem;
+  --spacing-56: 14rem;
+  --spacing-60: 15rem;
+  --spacing-64: 16rem;
+  --spacing-68: 17rem;
+  --spacing-72: 18rem;
+  --spacing-80: 20rem;
+  --spacing-96: 24rem;
+  --spacing-112: 28rem;
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+  --spacing-160: 40rem;
+  --spacing-192: 48rem;
+
+  /* Modal panel widths (Figma: Desktop Small / Medium / Large) */
+  --width-modal-sm: 30rem;
+  --width-modal-md: 38.75rem;
+  --width-modal-lg: 56.25rem;
+  --max-width-modal-sm: 30rem;
+  --max-width-modal-md: 38.75rem;
+  --max-width-modal-lg: 56.25rem;
+
+  /* ========================================
+     BORDERS & RADIUS (Figma: Border/Radius/*, Border/Width/*)
+     ======================================== */
+
+  /*
+   * Figma's 4/6/8/12px radii (rounded-sm/md/lg/xl) equal Tailwind's default
+   * --radius-* scale, so only the values that differ are declared here.
+   */
+  --radius-full: 9999px;
+
+  /*
+   * Figma's 1px and 2px border and outline widths need no token: Tailwind's
+   * width and offset utilities read a bare number as pixels.
+   */
+
+  /* ========================================
+     ASPECT RATIOS
+     ======================================== */
+
+  --aspect-product: 3 / 4;
+
+  /* ========================================
+     BOX SHADOWS
+     ======================================== */
+
+  --shadow-none: none;
+  --shadow-input: 0px 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-hover:
+    0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-overlay:
+    0px 2px 4px rgba(0, 0, 0, 0.08), 0px 12px 24px rgba(0, 0, 0, 0.08);
+}

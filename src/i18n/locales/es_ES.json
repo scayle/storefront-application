@@ -1,0 +1,778 @@
+{
+  "price": {
+    "starting_from": "desde",
+    "30_day_best_price": "Mejor precio en 30 días:",
+    "starting_from_with_amount": "de {amount}",
+    "originally": "Originalmente:",
+    "sale_label": "Rebajas:",
+    "info_trigger_a11y": "Mostrar información sobre el precio",
+    "information": {
+      "headline": "Información sobre precios",
+      "current_cost": "Cuánto cuesta este artículo ahora mismo:",
+      "first_offered": "El precio al que ofrecimos el artículo por primera vez:",
+      "lowest_30_days": "El precio más bajo de los últimos 30 días:",
+      "see_in_basket": "Ver el precio final en la cesta.",
+      "campaign_label": "Campaña «{name} »:",
+      "promotion_label": "Promoción «{name} »:"
+    }
+  },
+  "campaign": {
+    "deal": "Especial"
+  },
+  "promotion": {
+    "condition": "Condición",
+    "free_label": "Gratis",
+    "ribbon": {
+      "a11y": {
+        "landmark": "Banner promocional"
+      }
+    },
+    "confirmation": {
+      "headline": "¡Promoción aplicada!",
+      "subline": "Consulta el precio final en la cesta."
+    },
+    "deal": "Oferta"
+  },
+  "promotion_banner": {
+    "locked": "¡Desbloquea tu oferta! Añade los productos elegibles a tu carrito para disfrutar de la oferta.",
+    "unlocked": "¡Buen trabajo! Has desbloqueado la oferta completa y has guardado {amount}.",
+    "unlocked_buy_x_get_y": "¡Buen trabajo! Has desbloqueado la oferta completa. Selecciona ahora tu artículo y disfruta de tu recompensa."
+  },
+  "promotion_progress_wrapper": {
+    "remaining_minimum_order_value": "¡Desbloquea tu oferta! Gasta {amount} más para activar esta promoción.",
+    "fulfilled_promotion_condition": "¡Has desbloqueado una oferta especial! Añade productos elegibles a tu cesta de la compra para disfrutar de los beneficios.",
+    "partial_savings": "¡Buen trabajo! Has desbloqueado una oferta y ahorrado {amount}. Sigue comprando para desbloquear aún más.",
+    "full_savings": "¡Buen trabajo! Has desbloqueado la oferta completa y has ahorrado {amount}.",
+    "free_gift": "Regalo"
+  },
+  "buy_x_get_y_products": {
+    "headline": "¡No te pierdas esta oferta!",
+    "description": "Selecciona ahora tu artículo y disfruta de tu recompensa.",
+    "a11y": {
+      "add_item": "Añade tu producto promocional {name}"
+    }
+  },
+  "product_promotion_selection_modal": {
+    "details": "Detalles"
+  },
+  "common": {
+    "sold_out": "Agotado",
+    "sold_out_long": "Actualmente agotado en línea.",
+    "welcome": "¡Bienvenido, {name}!",
+    "back_to_shop": "Volver a la tienda",
+    "to_shop": "Ir a la tienda",
+    "sign_out": "Cerrar sesión",
+    "sign_in": "Iniciar sesión",
+    "continue_shopping": "Continuar comprando",
+    "sign_up": "Registrarse",
+    "account": "Abrir opciones de cuenta",
+    "skip_to_main_content": "Ir al contenido principal",
+    "skip_to_search": "Ir a la búsqueda",
+    "skip_to_basket": "Ir a la cesta"
+  },
+  "badge_labels": {
+    "new": "Nuevo en",
+    "already_in_basket": "Ya en la cesta de la compra.",
+    "low_stock": "Stock bajo"
+  },
+  "promotion_slide_in": {
+    "open_button": {
+      "no_active_promotions_title": "Tus ofertas",
+      "active_promotions_title": "Tus ofertas – {total} Promociones activas"
+    },
+    "headline": "Tus ofertas",
+    "subline": "Encuentra productos con descuento haciendo clic en cualquier promoción. Descubre ofertas que cambian constantemente en artículos seleccionados.",
+    "no_active_subline": "Ahora mismo no hay promociones activas. ¡Vuelve más tarde para ver nuevas ofertas y promociones especiales!"
+  },
+  "country_detection": {
+    "headline": "Parece que estás en {detectedCountry}",
+    "subline_single_language": "Estás comprando en {currentCountry}. Los precios, la entrega y las opciones de pago pueden variar según el país.",
+    "subline_multi_language": "Estás comprando en {currentCountry}. Elige tu idioma para {detectedCountry}.",
+    "shop_in_country": "Comprar en {detectedCountry}",
+    "stay_in_country": "Quedarme en {currentCountry}",
+    "override_codes": {
+      "ZZ": "International"
+    }
+  },
+  "shop_selector": {
+    "aria_label": "Cambiar tienda, tienda actual: {selectedCountry}, {selectedLanguage}",
+    "flyout_title": "Idioma y país",
+    "choose_language": "Elige tu idioma",
+    "choose_country": "Elige tu país",
+    "current_shop_indicator": ", tienda actual"
+  },
+  "global": {
+    "close": "Cerrar",
+    "including_vat": "incl. IVA.",
+    "sold_out": "Agotado",
+    "scroll_to_top_label": "Desplázate hacia arriba",
+    "play_video": "Reproducir vídeo",
+    "days": "día | días",
+    "hours": "hora | horas",
+    "minutes": "minuto | minutos",
+    "seconds": "segundo | segundos",
+    "back": "Volver",
+    "quantity": "Cantidad",
+    "search": "Search",
+    "cancel": "Cancel",
+    "search_results": "Search results",
+    "search_results_loading": "Loading search results",
+    "search_no_results": "No results found",
+    "search_results_count": "No results | {count} result found | {count} results found",
+    "search_redirecting": "Redirecting to results",
+    "excluding_vat": "sin IVA.",
+    "payment_key": {
+      "default": "Tarjeta de crédito",
+      "accounting": "Pago de factura",
+      "paypal": "PayPal",
+      "klarna_paylater": "Klarna Pay Later",
+      "klarna_paynow": "Klarna Pay Now",
+      "klarna_installments": "Klarna Installments"
+    },
+    "carrier_key": {
+      "DEFAULT": "UPS",
+      "DHL": "DHL",
+      "DHL_STD_NATIONAL": "DHL",
+      "HERMES": "Hermes",
+      "HERMES_STD_NATIONAL": "Hermes"
+    },
+    "save": "Guardar",
+    "days_short": "d",
+    "hours_short": "hrs",
+    "minutes_short": "min",
+    "seconds_short": "seg",
+    "seo_title_with_shop_name": "{title} {'|'} {shopName}",
+    "required": "obligatorio",
+    "clear": "Borrar"
+  },
+  "cms_page": {
+    "hero_image_alt": "Tienda creada con Storefront Application, mostrada en ordenador y en móvil"
+  },
+  "search_input": {
+    "placeholder": "Search for product, category or brand"
+  },
+  "text_input": {
+    "password": {
+      "show": "Mostrar contraseña",
+      "hide": "Ocultar contraseña"
+    }
+  },
+  "chip": {
+    "remove": "Eliminar",
+    "remove_item": "Eliminar {name}"
+  },
+  "product_suggestion_list": {
+    "title": "Products"
+  },
+  "category_suggestion_list": {
+    "title": "Categorías"
+  },
+  "navigation_item_suggestion_list": {
+    "title": "Pages"
+  },
+  "show_all_results_link": {
+    "open_on_search_page": "See all {searchTerm} results"
+  },
+  "add_to_basket": {
+    "add_to_basket": "Añadir a la cesta de la compra",
+    "coming_soon": "Disponible en {startDate}",
+    "no_longer_available": "Producto ya no disponible",
+    "notification": {
+      "add_to_basket_success": "{productName} se ha añadido a tu cesta de la compra.",
+      "add_to_basket_error": "{productName} no se pudo añadir a tu cesta de la compra.",
+      "add_to_basket_variant_out_of_stock_error": "Este tamaño está agotado en este momento.",
+      "add_to_basket_max_basket_items_error": "¡Ups! Has llegado al número máximo de artículos que puedes tener en tu cesta de la compra.",
+      "added_with_reduced_quantity": "Lo sentimos, no hay más artículos disponibles en esta talla. Todo el stock disponible ya se ha añadido a tu cesta.",
+      "remove_basket_item_success": "El artículo se ha eliminado de la cesta.",
+      "remove_basket_item_error": "No se ha podido eliminar el artículo de la cesta.",
+      "update_basket_item_quantity_error": "No se ha podido actualizar la cantidad.",
+      "update_basket_item_quantity_success": "Cantidad actualizada."
+    },
+    "a11y": {
+      "select_size": "Por favor, selecciona primero una talla"
+    }
+  },
+  "add_to_basket_slide_in": {
+    "title": "Se ha añadido a tu cesta de la compra",
+    "recommendations_title": "Puede que también te guste"
+  },
+  "slider": {
+    "go_to_previous_item": "Anterior",
+    "go_to_next_item": "Siguiente",
+    "a11y": {
+      "visible_range": "Mostrando artículos a partir de {start} de {total}",
+      "skip_to_start": "Ir al principio del carrusel",
+      "skip_to_end": "Saltar el carrusel",
+      "products_label": "Productos",
+      "carousel_label": "Carrusel",
+      "go_to_slide": "Ir a la diapositiva {index} de {total}"
+    }
+  },
+  "pagination": {
+    "a11y": {
+      "go_to_previous_page": "Ir a la página anterior",
+      "go_to_next_page": "Ir a la página siguiente",
+      "go_to_page": "Ir a la página {page}",
+      "label": "Paginación",
+      "page_status": "Página {current} de {total}"
+    }
+  },
+  "product_list_no_results": {
+    "title": "No hay resultados 🫣",
+    "description": "Lamentablemente, no hay productos en esta categoría o tus filtros no han encontrado ningún producto.",
+    "reset_filters": "Restablecer filtros",
+    "back_to_category": "Volver a {category}"
+  },
+  "sorting_select": {
+    "top_seller": "Recomendaciones",
+    "date_newest": "Más reciente",
+    "price_desc": "Precio descendente",
+    "price_asc": "Precio ascendente",
+    "reduction_desc": "Reducción descendente",
+    "relevance": "Relevance"
+  },
+  "image_view_selection": {
+    "label": "Vista",
+    "default": "Predeterminado"
+  },
+  "search_page": {
+    "title": "Products for \"{term}\"",
+    "meta": {
+      "title": "Products for \"{term}\""
+    },
+    "a11y": {
+      "result_count": "{count} resultado | {count} resultados"
+    },
+    "term_too_long": "Tu búsqueda es demasiado larga. Prueba con un término de búsqueda más corto.",
+    "no_results": {
+      "title": "No hay productos para mostrar aquí",
+      "tip": "Revisa la ortografía o prueba con un término de búsqueda más corto y general."
+    }
+  },
+  "filter_header": {
+    "title": "Categorías de filtro"
+  },
+  "filter_actions": {
+    "show_results_with_count": "Ver {count} artículos",
+    "show_results": "Ver artículos",
+    "reset_all_filter": "Restablecer todo"
+  },
+  "filter_slide_in_content": {
+    "sorting": "Ordenar",
+    "only_sale_option": "Mostrar solo productos en rebaja."
+  },
+  "filter_group": {
+    "reset": "Restablecer filtro"
+  },
+  "filter": {
+    "notification": {
+      "all_filters_cleared": "¡Se han borrado todos los filtros!",
+      "filter_updated": "¡Tus filtros se han aplicado correctamente!",
+      "sort_updated": "¡Tu ordenación se ha aplicado correctamente!",
+      "filter_and_sort_updated": "¡Tu ordenación y filtros se han aplicado correctamente!"
+    },
+    "show_filter": "Mostrar filtros",
+    "show_filter_and_sorting": "Mostrar filtros y ordenar",
+    "a11y": {
+      "toggle_with_count": "{label}, {count} active"
+    }
+  },
+  "filter_range_slider": {
+    "to": "hasta",
+    "price": {
+      "maximum": "Precio máximo: {price}",
+      "minimum": "Precio mínimo: {price}"
+    },
+    "percentage": {
+      "maximum": "Reducción máxima: {reduction}",
+      "minimum": "Reducción mínima: {reduction}"
+    },
+    "a11y": {
+      "value_clamped_to_min": "Valor ajustado al mínimo permitido",
+      "value_clamped_to_max": "Valor ajustado al máximo permitido"
+    }
+  },
+  "footer": {
+    "copyright": "© {currentYear} SCAYLE, Todos los derechos reservados",
+    "privacy_settings": "Configuración de privacidad",
+    "a11y": {
+      "primary_nav": "Pie de página",
+      "legal_nav": "Enlaces legales"
+    }
+  },
+  "navigation": {
+    "a11y": {
+      "side_navigation": "Abrir navegación lateral",
+      "close_side_navigation": "Cerrar navegación lateral",
+      "category_navigation": "Navegación por categorías",
+      "category_list": "Lista de categorías",
+      "home_link": "Ir a la página de inicio",
+      "home_link_disabled": "Estás en la página de inicio",
+      "main": "Principal",
+      "header": "Encabezado",
+      "breadcrumb": "Ruta de navegación",
+      "mobile_categories": "Categorías para móvil",
+      "back_to_main_menu": "Volver al menú principal",
+      "show_subcategories": "{name}, mostrar subcategorías",
+      "show_submenu": "Mostrar un submenú en {name} "
+    },
+    "breadcrumb": {
+      "item_count": "{count} artículo | {count} artículos"
+    }
+  },
+  "notification": {
+    "view": "Ver",
+    "reload": "Actualizar",
+    "error": {
+      "http_exception": "Ha ocurrido un error. Inténtalo de nuevo.",
+      "network_error": "La solicitud ha fallado. Inténtalo de nuevo más tarde."
+    },
+    "dismiss": "Cerrar notificación"
+  },
+  "product_image": {
+    "alt": "{brand}, {productName}, {colors}",
+    "alt_with_image_index": "{alt}, Imagen {index} de {total}",
+    "a11y": {
+      "zoom_dialog_label": "Imagen del producto, vista ampliada",
+      "grid_label": "{name}, galería de productos",
+      "enlarge_image": "Ampliar imagen {index} de {total}",
+      "zoomed_gallery_label": "{name}, galería de productos (ampliada)",
+      "slide_position": "{current} de {total}"
+    }
+  },
+  "product_video": {
+    "json_ld_name": "{name} (Vídeo {index})",
+    "a11y": {
+      "slide_label": "{name}, vídeo {index} de {total}"
+    }
+  },
+  "image_slider": {
+    "a11ly": {
+      "go_to_previous_image": "Imagen anterior",
+      "go_to_next_image": "Siguiente imagen",
+      "carousel_label": "Galería de productos",
+      "image_position": "{current} e de imagen de {total}",
+      "go_to_image": "Ir a la imagen {index}",
+      "list_label": "Imágenes de productos"
+    }
+  },
+  "quantity_input": {
+    "change_value_to": "Cambiar la cantidad a {newQuantity}"
+  },
+  "product_attribute": {
+    "size": "Talla",
+    "color": "Color"
+  },
+  "sibling_selection": {
+    "sibling_error": "Error: ¡Este atributo no está configurado!",
+    "selected": "Seleccionado",
+    "unselected": "No seleccionado",
+    "a11y": {
+      "alt_text": "{selected}, {alt}",
+      "sold_out_alt_text": "{selected}, {alt} (Agotado)",
+      "previous_color": "Color anterior",
+      "next_color": "Color siguiente"
+    }
+  },
+  "product_detail": {
+    "sellable_in_past": "Producto archivado. Este producto ya no está disponible para su compra.",
+    "sellable_in_future": "¡Próximamente! Este producto aún no está disponible para su compra."
+  },
+  "variant_picker": {
+    "select_size": "Seleccionar tamaño",
+    "option": {
+      "select_option": "Seleccionar tamaño {option}"
+    }
+  },
+  "product_details": {
+    "information": {
+      "fit_size": "Talla y ajuste",
+      "extras": "Extra",
+      "design": "Diseño"
+    },
+    "shipping_return_heading": {
+      "title": "Envío y devolución",
+      "general_info": "Los gastos de envío y devolución de los artículos, así como los costos de embalaje, serán cubiertos por SCAYLE. Los pedidos con múltiples productos pueden dar lugar a entregas parciales.",
+      "dhl_headline": "Envío estándar de DHL: 0,00 EUR",
+      "dhl_paragraph": "Los artículos disponibles de inmediato suelen entregarse por DHL en un plazo de 1 a 3 días laborables.",
+      "hermes_headline": "Hermes – 0,00 EUR",
+      "hermes_paragraph": "Los artículos disponibles de inmediato suelen ser entregados por Hermes en un plazo de 1 a 3 días laborables.",
+      "return_information": "Si no viene la etiqueta de devolución en tu paquete, puedes pedir una nueva a nuestro servicio de atención al cliente en cualquier momento."
+    }
+  },
+  "sign_in_page": {
+    "title": "¡Hola! ¿Eres nuevo/a aquí o estás de vuelta?",
+    "meta": {
+      "title": "Inicia sesión o regístrate",
+      "description": "Entra en tu cuenta o crea una nueva en {shopName}. Disfruta de una experiencia de compra fluida con un inicio de sesión seguro y opciones personalizadas."
+    }
+  },
+  "authentication": {
+    "notification": {
+      "success": {
+        "login": "¡Inicio de sesión correcto! ¡Qué bueno tenerte de vuelta!",
+        "sign_up": "¡Tu cuenta se ha creado correctamente!",
+        "reset_password": "Tu contraseña se ha restablecido correctamente. Ahora puedes iniciar sesión con tu nueva contraseña.",
+        "guest_login": "¡Tu cuenta ya está creada! Ahora puedes seguir con tu pedido."
+      },
+      "error": {
+        "logout": "Error al cerrar sesión. Inténtalo de nuevo."
+      }
+    }
+  },
+  "product_detail_page": {
+    "meta": {
+      "title": "{productName}",
+      "description": "Compra {productName} online en {shopName}. Descubre la amplia selección de otros productos de marca."
+    },
+    "similar_products": "Productos similares",
+    "trending_products": "Tendencias en esta categoría"
+  },
+  "product_list_page": {
+    "meta": {
+      "title": "{listingTitle}",
+      "description": "Compra {category} en {shopName}. Descubre una amplia gama de {category}",
+      "page": "Página {pageNumber}"
+    }
+  },
+  "wishlist_page": {
+    "meta": {
+      "title": "Tu favoritos",
+      "description": "Guarda tus productos favoritos y sigue el rastro de lo que más necesitas."
+    },
+    "title": "Favoritos",
+    "a11y": {
+      "title": "Lista de deseos | Lista de deseos, {count} artículo | Lista de deseos, {count} artículos",
+      "empty_actions": "Acciones de la lista de deseos"
+    },
+    "empty_title": "No tienes ningún artículo en tu lista de deseos.",
+    "empty_description": "Guarda tus productos favoritos y lleva un registro de tus imprescindibles.",
+    "notification": {
+      "toggle_error": "No se ha podido actualizar tu lista de deseos. Inténtalo de nuevo."
+    }
+  },
+  "basket_page": {
+    "title": "Cesta de la compra",
+    "empty_basket_title": "Tu cesta de la compra está vacía.",
+    "empty_basket_description": "Tus productos aparecerán en cuanto los añadas a tu cesta de la compra.",
+    "a11y": {
+      "title": "Cesta de la compra | Cesta de la compra, {count} artículo | Cesta de la compra, {count} artículos"
+    },
+    "meta": {
+      "title": "Cesta",
+      "description": "Revisa tus artículos y continúa con el proceso de pago."
+    }
+  },
+  "basket": {
+    "go_to_basket": "Ir a la cesta de la compra",
+    "go_to_checkout": "Ir a checkout",
+    "unavailable_products": "Productos no disponibles",
+    "size_selector": {
+      "notification": {
+        "error": "No se ha podido actualizar la talla. Inténtalo de nuevo.",
+        "success": "Talla actualizada.",
+        "success_merged": "Talla actualizada. Se ha combinado con el mismo artículo que ya tenías en tu cesta.",
+        "previous_size_kept": "Nueva talla añadida. No se ha podido eliminar la talla anterior, que sigue en tu cesta.",
+        "reduced_quantity": "Solo queda {count} artículo en esta talla, así que se ha ajustado la cantidad. | Solo quedan {count} artículos en esta talla, así que se ha ajustado la cantidad."
+      },
+      "a11y": {
+        "select_size": "Cambiar talla de {name}"
+      }
+    },
+    "a11y": {
+      "active_promotions": "Promociones activas",
+      "item_removed": "{name} eliminado de tu cesta",
+      "quantity_changed": "La cantidad de « {name} » ha cambiado a {count}",
+      "size_changed": "La talla de « {name} » ha cambiado a {size}",
+      "size_change_failed": "No se ha podido cambiar la talla de « {name} ». Inténtalo de nuevo.",
+      "remove_failed": "No se ha podido eliminar « {name} ». Inténtalo de nuevo."
+    }
+  },
+  "basket_summary": {
+    "discount": "Descuentos",
+    "delivery_fees": "* Los gastos de envío se determinarán durante el checkout después de elegir una opción de entrega preferida.",
+    "you_pay": "Tú pagas",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "delivery": "Entrega"
+  },
+  "basket_summary_reduction": {
+    "sale": "Rebajas",
+    "voucher": "Vale"
+  },
+  "basket_promotion_codes": {
+    "headline": "Códigos promocionales",
+    "add_code": "Añadir",
+    "remove_code": "Eliminar {code}",
+    "input_placeholder": "Código",
+    "input_label": "Código promocional",
+    "add_success": "Tu código se ha aplicado correctamente.",
+    "add_error": "Lamentablemente, no se ha podido añadir el código promocional.",
+    "remove_error": "Lamentablemente, no se ha podido eliminar el código promocional."
+  },
+  "basket_card": {
+    "remove_from_basket_confirmation": "¿Estás seguro de que quieres eliminar este artículo?",
+    "remove_from_basket_confirmation_description": "¿Estás seguro de que quieres eliminar este artículo de tu cesta de la compra?",
+    "confirm_removal": "Eliminar artículo",
+    "remove_item": "Eliminar « {name} » de la cesta"
+  },
+  "order_success_page": {
+    "title": "Resumen de tu pedido",
+    "meta": {
+      "title": "Pedido confirmado! Gracias por tu compra",
+      "description": "¡Gracias por tu pedido! Tu compra está confirmada. Revisa tu correo electrónico para ver los detalles del pedido."
+    },
+    "no_order_found": {
+      "title": "No se ha encontrado la información del pedido.",
+      "description": "No se han podido recuperar los detalles de tu pedido. Es posible que el enlace haya caducado o no sea válido. Por favor, revisa tu correo electrónico para verificar si tienes el enlace correcto o contacta con el servicio de atención al cliente para que te asistan.",
+      "meta": {
+        "title": "@:order_success_page.no_order_found.title"
+      }
+    },
+    "go_to_order_details": "Detalles del pedido"
+  },
+  "order_success_page_greeting": {
+    "title": "¡Gracias por tu compra!",
+    "email_confirmation": "Te hemos enviado la confirmación del pedido al correo electrónico que nos diste."
+  },
+  "order_information": {
+    "order_details": {
+      "title": "Detalles del pedido",
+      "order_date": "Fecha del pedido",
+      "order_number": "Número de pedido",
+      "order_number_value": "Pedido n.º{orderNumber}",
+      "estimated_delivery_date": "Entrega prevista",
+      "delivered_by": "Enviado por:",
+      "customer_id": "Número de cliente"
+    },
+    "payment_details": {
+      "title": "Detalles del pago",
+      "payment_method": "Método de pago"
+    },
+    "address_details": {
+      "delivery_and_billing_address": "Dirección de envío y facturación",
+      "delivery_address": "Dirección de envío",
+      "billing_address": "Dirección de facturación"
+    },
+    "payment_summary": {
+      "subtotal": "Subtotal",
+      "shipping_costs": "Gastos de envío",
+      "other_fees": "Otros gastos",
+      "total": "Total"
+    }
+  },
+  "expressCheckout": {
+    "error": {
+      "deviceNotSupported": "El dispositivo indicado no está permitido.",
+      "paymentMethodNotAvailable": "El método de pago seleccionado no está disponible.",
+      "pspSessionCreationFailed": "No se ha podido crear la sesión del proveedor de servicios de pago.",
+      "failedToFetchSession": "No se ha podido obtener una sesión válida del proveedor de servicios de pago.",
+      "basketNotFound": "No se ha encontrado la cesta.",
+      "basketInvalid": "La cesta no es válida.",
+      "failedDependency": "No se ha podido actualizar la transacción.",
+      "unknownError": "Ha ocurrido un error. Inténtalo de nuevo.",
+      "errorShippingAddressValidationFailed": "Error al validar la dirección de envío.",
+      "outOfConstraints": "El total de la cesta supera el valor máximo permitido para el pedido."
+    }
+  },
+  "account": {
+    "page": {
+      "title": "Tu cuenta"
+    },
+    "tabs": {
+      "orders": "Tus pedidos",
+      "profile": "Tu perfil",
+      "subscriptions": "Tus suscripciones",
+      "short": {
+        "orders": "Pedidos",
+        "subscriptions": "Suscripciones",
+        "profile": "Perfil"
+      }
+    },
+    "orders": {
+      "title": "Tus pedidos",
+      "empty_state": {
+        "title": "Aún no hay pedidos",
+        "description": "Una vez que hagas un pedido, lo encontrarás aquí."
+      },
+      "card": {
+        "title": "N.º de pedido{id}",
+        "order_date": "Fecha del pedido",
+        "items": "Artículos"
+      },
+      "status": {
+        "open": "Abierto",
+        "confirmed": "Confirmado",
+        "shipped": "Enviado",
+        "cancelled": "Cancelado"
+      },
+      "meta": {
+        "title": "@:account.orders.title"
+      }
+    },
+    "profile": {
+      "title": "Tu perfil",
+      "description": "Gestiona tu perfil.",
+      "personal_information": {
+        "title": "Información personal",
+        "description": "Actualiza tus datos personales para mantener tu cuenta al día.",
+        "success_message": "Tus datos se han actualizado correctamente.",
+        "error_message": "No se ha podido guardar la información. Inténtalo de nuevo.",
+        "no_changes": "No hay cambios que guardar."
+      },
+      "account_information": {
+        "title": "Información de la cuenta",
+        "customer_number": "Número de cliente",
+        "email": "Correo electrónico",
+        "disclaimer": "Tu dirección de correo electrónico y tu número de cliente no se pueden cambiar aquí. Ponte en contacto con el servicio de asistencia para obtener ayuda."
+      },
+      "password_management": {
+        "title": "Gestión de contraseñas",
+        "description": "Mantén tu cuenta segura actualizando tu contraseña con regularidad.",
+        "idp_description": "Tu cuenta está protegida mediante un proveedor de inicio de sesión externo, por lo que no es necesario cambiar tu contraseña aquí. Para actualizar tu contraseña, ve a la configuración de tu proveedor de inicio de sesión.",
+        "success_message": "Tu contraseña se ha actualizado correctamente.",
+        "error": {
+          "400_bad_request": "No se ha podido procesar tu solicitud, por favor, inténtalo de nuevo.",
+          "wrong_password": "Tu contraseña actual no es correcta."
+        }
+      },
+      "meta": {
+        "title": "@:account.profile.title"
+      },
+      "saving": "Guardando…"
+    },
+    "form_fields": {
+      "gender": "Género",
+      "gender_options": {
+        "male": "Hombre",
+        "female": "Mujer",
+        "diverse": "Diverso",
+        "none": "Prefiero no decirlo"
+      },
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "birth_date": "Fecha de nacimiento",
+      "old_password": "Contraseña actual",
+      "new_password": "Nueva contraseña"
+    },
+    "validation": {
+      "required": "{field} es obligatorio.",
+      "past_date": "{field} no puede tener una fecha en el futuro.",
+      "password": "Tu contraseña debe tener entre 8 y 70 caracteres, no contener espacios, e incluir una letra mayúscula, una letra minúscula, un número y un carácter especial.",
+      "date": "{field} debe ser una fecha válida.",
+      "form_error_summary": "{count} campo necesita tu atención. | {count} campos necesitan tu atención."
+    },
+    "order_detail": {
+      "title": "N.º de pedido {id}",
+      "meta": {
+        "title": "@:account.order_detail.title",
+        "description": "Consulta los detalles y el estado de tu pedido n.º {id}."
+      },
+      "order_details": {
+        "title": "Detalles del pedido",
+        "order_date": "Fecha del pedido"
+      },
+      "payment_details": {
+        "title": "Detalles de pago",
+        "payment_method": "Método de pago"
+      },
+      "address_details": {
+        "delivery_and_billing_address": "Dirección de entrega y facturación",
+        "delivery_address": "Dirección de entrega",
+        "billing_address": "Dirección de facturación"
+      },
+      "product": {
+        "color": "Color",
+        "size": "Talla"
+      },
+      "payment_summary": {
+        "subtotal": "Subtotal",
+        "shipping_costs": "Gastos de envío",
+        "other_fees": "Otros gastos",
+        "total": "Total"
+      }
+    },
+    "a11y": {
+      "menu": "Menú de la cuenta"
+    }
+  },
+  "recentlyViewedProductsSlider": {
+    "title": "Productos vistos recientemente"
+  },
+  "error": {
+    "error_code_label": "Código de error:",
+    "page_not_found_title": "Página no encontrada.",
+    "page_not_found_message": "Lo sentimos, la página que buscas no existe o se ha trasladado.",
+    "unknown_error_title": "Vaya, ha pasado algo",
+    "unknown_error_message": "No se ha podido procesar tu solicitud, por favor, vuelve a intentarlo más tarde.",
+    "technical_details_title": "Detalles del error técnico"
+  },
+  "low_stock": {
+    "few_items_left": "¡Solo quedan unos pocos artículos!",
+    "x_left": "¡Solo quedan {count}!"
+  },
+  "countdown": {
+    "days_left": "{count} Días que faltan",
+    "ends_in": "Finaliza en:"
+  },
+  "checkout_page": {
+    "meta": {
+      "title": "Pago",
+      "description": "Finaliza tu pedido."
+    }
+  },
+  "a11y": {
+    "navigated_to": "Navegado a {title}",
+    "skip_links": "Saltar enlaces"
+  },
+  "subscription": {
+    "label": "Suscripción",
+    "interval": "Intervalo",
+    "follow_up_delivery": "Seguimiento de la entrega",
+    "day_of_month_selection_caption": "El {dayOfMonth} de cada mes",
+    "ordinal_suffix": {
+      "one": "",
+      "two": "",
+      "few": "",
+      "other": ""
+    },
+    "product": {
+      "subscribe": "Suscríbete y ahorra",
+      "select_size": "Elige una talla para ver las opciones de suscripción",
+      "not_eligible": "Esta variante no está disponible como suscripción",
+      "separation_text": "O ahorra aún más:",
+      "add_to_basket": "Suscríbete a {interval}"
+    },
+    "page": {
+      "headline": "Mis suscripciones",
+      "meta": {
+        "title": "Mis suscripciones",
+        "description": "Gestiona tus suscripciones"
+      }
+    },
+    "order_notice": {
+      "title": "Incluye artículos de suscripción.",
+      "text": "Este pedido contiene productos de suscripción. Gestiona las entregas y las cancelaciones en tus suscripciones.",
+      "link": "Ir a suscripciones"
+    },
+    "cancellation": {
+      "meta": {
+        "title": "Cancelar suscripción",
+        "description": "Gestiona la cancelación de tu suscripción"
+      }
+    }
+  },
+  "range_slider": {
+    "a11y": {
+      "thumb_minimum": "Valor mínimo",
+      "thumb_maximum": "Valor máximo"
+    }
+  },
+  "wishlist_toggle": {
+    "a11y": {
+      "add_to_wishlist": "Añadir « {name} » a la lista de deseos",
+      "remove_from_wishlist": "Eliminar « {name} » de la lista de deseos",
+      "removed_announcement": "{name} eliminado de tu lista de deseos"
+    }
+  }
+}

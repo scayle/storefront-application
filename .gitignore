@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+/build
+/dist
+/dist-ssr
+.output
+*.local
+
+# Caches and test output
+coverage
+.eslintcache
+*.tsbuildinfo
+.turbo/
+
+# Storybook
+storybook-static
+*storybook.log
+
+# Logs
+logs
+*.log
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# SCAYLE CLI credentials. `sfcli` writes the Admin API token here.
+# The CMS content models under .scayle/cms/ stay tracked.
+.scayle/config.json
+
+# Storyblok CLI (components pull, types generate)
+.storyblok/
+
+# Local documentation
+.docs
+
+# Certificates and keys for the local HTTPS dev server
+*.pem
+*.crt
+*.csr
+*.key
+*.cer
+
+# Redis dumps
+*.rdb
+
+# AI coding agents. The shared `.claude/` folder stays tracked.
+.claude/settings.local.json
+.claude/worktrees/
+CLAUDE.local.md
+
+# Editors and IDEs
+.idea/
+.fleet/
+.vs/
+*.sublime-workspace
+*.swp
+*.swo
+Session.vim
+
+# VS Code: share the workspace settings, ignore everything else
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Operating system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.directory
+.Trash-*
+*~

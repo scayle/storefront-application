@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@client/*": ["./src/client/*"],
+      "@server/*": ["./src/server/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@cms-server/*": ["./src/server/cms/providers/scayle/*"],
+      "@cms-client/*": ["./src/client/cms/providers/scayle/*"],
+      "@cms-shared": ["./src/shared/types/cms/scayle/index.ts"],
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/client/assets/*"],
+      "@test/*": ["./src/test/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    ".storybook/**/*.ts",
+    "src/**/*.vue",
+    "src/shared/types/global.d.ts",
+    "src/server/types/index.ts"
+  ],
+  "exclude": ["node_modules", "build", "dist", "testing/playwright"]
+}

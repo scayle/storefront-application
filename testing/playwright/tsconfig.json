@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    // The tests import `config/ui.ts` from the Storefront Application, which sits above this package.
+    "rootDir": "../..",
+    "types": ["node", "@playwright/test"],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@orpc/client": ["../../node_modules/@orpc/client"],
+      "@orpc/client/*": ["../../node_modules/@orpc/client/*"],
+      "@orpc/server": ["../../node_modules/@orpc/server"]
+    }
+  },
+  "include": [
+    "./tests/**/*.ts",
+    "./fixtures/**/*.ts",
+    "./page-objects/**/*.ts",
+    "./playwright.config.ts",
+    "./reporters/**/*.ts",
+    "./support/**/*.ts"
+  ],
+  "exclude": ["node_modules", "playwright-report"]
+}

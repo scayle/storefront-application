@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scayle.com/schemas/countdown-timer-component.json",
+  "title": "Countdown Timer",
+  "description": "A countdown timer that runs down to a target date and time. Use it for sale endings, launch moments, or any deadline you want shoppers to see.",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "end_date": {
+      "title": "End Date",
+      "description": "Date and time the timer counts down to. The timer disappears once this moment passes.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "size": {
+      "title": "Size",
+      "description": "Visual size of the timer. Defaults to Small.",
+      "type": "string",
+      "enum": [
+        "small",
+        "large"
+      ],
+      "default": "small"
+    }
+  },
+  "required": [
+    "end_date"
+  ],
+  "propertyOrder": [
+    "end_date",
+    "size"
+  ]
+}

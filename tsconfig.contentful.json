@@ -1,0 +1,21 @@
+{
+  // Per-provider typecheck config: same program as tsconfig.json, with the
+  // three CMS aliases pointed at the contentful provider so vue-tsc verifies the
+  // page-to-provider payload boundary for this CMS_PROVIDER value.
+  // "paths" replaces the base map wholly (tsconfig "extends" does not merge
+  // it), so every alias is re-declared here.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@client/*": ["./src/client/*"],
+      "@server/*": ["./src/server/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@cms-server/*": ["./src/server/cms/providers/contentful/*"],
+      "@cms-client/*": ["./src/client/cms/providers/contentful/*"],
+      "@cms-shared": ["./src/shared/types/cms/contentful/index.ts"],
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/client/assets/*"],
+      "@test/*": ["./src/test/*"]
+    }
+  }
+}

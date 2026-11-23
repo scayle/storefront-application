@@ -1,0 +1,15 @@
+node_modules
+build
+dist
+pnpm-lock.yaml
+*.min.js
+*.min.css
+
+# Generated CMS types (`pnpm cms:sync`)
+**/types/cms/**/gen/**
+
+# CMS content model exported by `pnpm cms:sync`, formatted by the provider CLIs
+.scayle/cms/**/*
+
+# Local implementation plans, never committed
+docs/superpowers/plans/

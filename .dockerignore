@@ -1,0 +1,39 @@
+# Ignore file for the Dockerfile in this directory, which is also the build
+# context. Dependencies and build output are recreated inside the image.
+
+# Version control and editor tooling
+.git
+.changeset
+.claude
+.cursor
+.vscode
+
+# Documentation
+docs
+
+# Dependencies and build output
+**/node_modules
+**/dist
+**/.output
+**/.turbo
+
+# Local env files and secrets (runtime config is passed to `docker run`).
+# `.scayle/config.json` holds the Admin API token that `sfcli setup` saves.
+**/.env
+**/.env.*
+.scayle/config.json
+.npmrc
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cer
+**/*.csr
+**/*.rdb
+**/certs
+
+# Test and tooling artifacts
+**/coverage
+**/storybook-static
+**/test-results
+**/.auth
+**/playwright-report

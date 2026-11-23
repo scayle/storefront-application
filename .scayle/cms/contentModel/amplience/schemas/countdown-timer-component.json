@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/countdown-timer-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/countdown-timer-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

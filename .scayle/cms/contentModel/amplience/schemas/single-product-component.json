@@ -1,0 +1,5 @@
+{
+  "body": "./schemas/single-product-component-schema.json",
+  "schemaId": "https://scayle.com/schemas/single-product-component.json",
+  "validationLevel": "CONTENT_TYPE"
+}

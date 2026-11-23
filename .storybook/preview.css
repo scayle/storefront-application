@@ -1,0 +1,7 @@
+/* `index.css` leaves stories and docs pages out of production CSS, so Storybook
+   adds them back for its own build. */
+@import '../src/client/index.css';
+@source '../src/client/**/*.stories.ts';
+@source './content/*.mdx';
+/* Re-including the stories also brings test files back into the scan. */
+@source not '../src/**/*.test.ts';
